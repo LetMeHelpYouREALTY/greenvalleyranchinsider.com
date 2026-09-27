@@ -14,6 +14,7 @@ import {
 } from '@/components/ui/field';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { FORM_SUBMIT_ERROR_MESSAGE } from '@/lib/site';
 import { valuationFormSchema, type ValuationFormSchema as ValuationFormType } from '@/lib/types';
 import { toast } from 'sonner';
 import { Home, TrendingUp } from 'lucide-react';
@@ -39,23 +40,24 @@ export function ValuationForm() {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          // Map to existing form schema format for API compatibility
+          formType: 'seller',
+          sourceUrl: typeof window !== 'undefined' ? window.location.href : undefined,
           name: data.name,
           email: data.email,
           phone: data.phone || '',
-          company: data.address, // Using company field for address
-          message: `Address: ${data.address}\n\nEstimated Renovations: ${data.renovations || 'None specified'}\n\nWhy considering moving: ${data.movingReason}`
-        })
+          company: data.address,
+          message: `Address: ${data.address}\n\nEstimated Renovations: ${data.renovations || 'None specified'}\n\nWhy considering moving: ${data.movingReason}`,
+        }),
       });
 
       if (response.ok) {
         toast.success('Your valuation request has been submitted! We\'ll contact you shortly.');
         form.reset();
       } else {
-        toast.error('Submission failed. Please try again.');
+        toast.error(FORM_SUBMIT_ERROR_MESSAGE);
       }
     } catch (error) {
-      toast.error('An error occurred. Please try again.');
+      toast.error(FORM_SUBMIT_ERROR_MESSAGE);
       console.error('Form submission error:', error);
     }
   }

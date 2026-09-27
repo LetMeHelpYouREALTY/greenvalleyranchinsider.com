@@ -1,9 +1,30 @@
-import { formSchema } from '@/lib/types';
+import { sendFollowUpBossEvent } from '@/lib/fub';
+import { mapSubmitBodyToFub } from '@/lib/map-lead-to-fub';
+import { formSchema, submitBodySchema } from '@/lib/types';
 import { checkBotId } from 'botid/server';
 import { start } from 'workflow/api';
 import { workflowInbound } from '@/workflows/inbound';
 
+function fubFailureStatus(result: { status: string }): number {
+  return result.status === 'missing_key' ? 503 : 502;
+}
+
 export async function POST(request: Request) {
+  let body: unknown;
+  try {
+    body = await request.json();
+  } catch {
+    return Response.json({ error: 'Invalid JSON body' }, { status: 400 });
+  }
+
+  const parsedBody = submitBodySchema.safeParse(body);
+  if (!parsedBody.success) {
+    return Response.json(
+      { error: 'Invalid form data', details: parsedBody.error.message },
+      { status: 400 }
+    );
+  }
+
   try {
     const verification = await checkBotId();
 
@@ -11,27 +32,35 @@ export async function POST(request: Request) {
       return Response.json({ error: 'Access denied' }, { status: 403 });
     }
 
-    const body = await request.json();
+    const referer = request.headers.get('referer');
+    const fubInput = mapSubmitBodyToFub(parsedBody.data, referer);
+    const fubResult = await sendFollowUpBossEvent(fubInput);
 
-    const parsedBody = formSchema.safeParse(body);
-    if (!parsedBody.success) {
+    if (!fubResult.ok) {
       return Response.json(
-        { error: 'Invalid form data', details: parsedBody.error.message },
-        { status: 400 }
+        { error: 'Failed to deliver lead to CRM' },
+        { status: fubFailureStatus(fubResult) }
       );
     }
 
-    await start(workflowInbound, [parsedBody.data]);
+    const workflowPayload = formSchema.parse({
+      email: parsedBody.data.email,
+      name: parsedBody.data.name,
+      phone: parsedBody.data.phone ?? '',
+      company: parsedBody.data.company ?? '',
+      message: parsedBody.data.message,
+    });
+
+    void start(workflowInbound, [workflowPayload]).catch((error) => {
+      console.error('Optional inbound workflow failed (lead already saved to FUB):', error);
+    });
 
     return Response.json(
       { message: 'Form submitted successfully' },
       { status: 200 }
     );
   } catch (error) {
-    // Log error for debugging (in production, use proper logging service)
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error in submit route:', error);
-    }
+    console.error('Error in submit route:', error);
     return Response.json(
       { error: 'Internal server error', message: 'Failed to process form submission' },
       { status: 500 }

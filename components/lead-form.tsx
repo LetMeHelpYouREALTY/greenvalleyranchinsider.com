@@ -15,6 +15,7 @@ import {
 } from '@/components/ui/field';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { FORM_SUBMIT_ERROR_MESSAGE } from '@/lib/site';
 import { formSchema } from '@/lib/types';
 import { toast } from 'sonner';
 
@@ -33,14 +34,21 @@ export function LeadForm() {
   async function onSubmit(data: z.infer<typeof formSchema>) {
     const response = await fetch('/api/submit', {
       method: 'POST',
-      body: JSON.stringify(data)
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        ...data,
+        formType: 'general',
+        sourceUrl: typeof window !== 'undefined' ? window.location.href : undefined,
+      }),
     });
 
     if (response.ok) {
       toast.success('Form submitted successfully');
       form.reset();
     } else {
-      toast.error('Form submission failed');
+      toast.error(FORM_SUBMIT_ERROR_MESSAGE);
     }
   }
 

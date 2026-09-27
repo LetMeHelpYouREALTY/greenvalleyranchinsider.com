@@ -25,6 +25,22 @@ export const formSchema = z.object({
 
 export type FormSchema = z.infer<typeof formSchema>;
 
+export const leadFormTypeSchema = z.enum(['general', 'seller', 'property']);
+
+export const submitBodySchema = formSchema.extend({
+  formType: leadFormTypeSchema.optional().default('general'),
+  sourceUrl: z.string().optional(),
+});
+
+export type SubmitBodySchema = z.infer<typeof submitBodySchema>;
+
+export const newsletterBodySchema = z.object({
+  email: z.email('Please enter a valid email address.'),
+  sourceUrl: z.string().optional(),
+});
+
+export type NewsletterBodySchema = z.infer<typeof newsletterBodySchema>;
+
 /**
  * Qualification schema
  */

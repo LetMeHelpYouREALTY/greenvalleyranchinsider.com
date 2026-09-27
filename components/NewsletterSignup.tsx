@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Mail, Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { FORM_SUBMIT_ERROR_MESSAGE } from '@/lib/site';
 import { toast } from 'sonner';
 
 export function NewsletterSignup() {
@@ -16,23 +17,34 @@ export function NewsletterSignup() {
     setIsSubmitting(true);
 
     try {
-      // In a real implementation, this would send to your email service
-      // For now, we'll just show a success message
-      await new Promise(resolve => setTimeout(resolve, 500));
-      
+      const response = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          sourceUrl: typeof window !== 'undefined' ? window.location.href : undefined,
+        }),
+      });
+
+      if (!response.ok) {
+        toast.error(FORM_SUBMIT_ERROR_MESSAGE);
+        return;
+      }
+
       setIsSuccess(true);
       toast.success('Thank you for subscribing!');
       setEmail('');
-      
-      // Track newsletter signup
+
       if (typeof window !== 'undefined' && (window as any).gtag) {
         (window as any).gtag('event', 'newsletter_signup', {
           event_category: 'engagement',
           event_label: 'newsletter',
         });
       }
-    } catch (error) {
-      toast.error('Something went wrong. Please try again.');
+    } catch {
+      toast.error(FORM_SUBMIT_ERROR_MESSAGE);
     } finally {
       setIsSubmitting(false);
       setTimeout(() => setIsSuccess(false), 3000);

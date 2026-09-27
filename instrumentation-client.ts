@@ -5,6 +5,10 @@ initBotId({
     {
       path: '/api/submit',
       method: 'POST'
+    },
+    {
+      path: '/api/newsletter',
+      method: 'POST'
     }
   ]
 });
