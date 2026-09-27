@@ -74,9 +74,6 @@ export const metadata: Metadata = {
     yandex: process.env.NEXT_PUBLIC_YANDEX_VERIFICATION,
     yahoo: process.env.NEXT_PUBLIC_YAHOO_VERIFICATION,
   },
-  alternates: {
-    canonical: 'https://www.greenvalleyranchinsider.com',
-  },
   openGraph: {
     title: 'Green Valley Ranch Insider | Henderson NV Real Estate Authority',
     description: 'Expert insights and premium listing services for Mystic Bay, The Cottages, and the Green Valley Ranch community. 30+ years experience, $127M+ in sales.',

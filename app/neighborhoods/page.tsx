@@ -4,6 +4,7 @@ import { Breadcrumbs } from '@/components/Breadcrumbs';
 import Link from 'next/link';
 import { RealScoutOfficeListings } from '@/components/RealScoutOfficeListings';
 import { WhyChooseReasons } from '@/components/WhyChooseReasons';
+import { NearbyAmenitiesSection } from '@/components/NearbyAmenitiesSection';
 
 export const metadata: Metadata = {
   title: 'Neighborhoods | Green Valley Ranch Insider | Henderson NV Communities',
@@ -168,6 +169,8 @@ export default function NeighborhoodsPage() {
           </div>
         </div>
       </section>
+
+      <NearbyAmenitiesSection className="bg-white" title="Amenities Near Every GVR Neighborhood" />
 
       {/* Comparison Table */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
