@@ -12,7 +12,7 @@ import {
 } from '@/lib/types';
 import { sendSlackMessageWithButtons } from '@/lib/slack';
 import { z } from 'zod';
-import { exa } from '@/lib/exa';
+import { getExaClient } from '@/lib/exa';
 
 /**
  * Qualify the lead
@@ -120,6 +120,10 @@ export const fetchUrl = tool({
     url: z.string().describe('Absolute URL, including http:// or https://')
   }),
   execute: async ({ url }) => {
+    const exa = getExaClient();
+    if (!exa) {
+      return { error: 'Research API not configured' };
+    }
     const result = await exa.getContents(url, {
       text: true
     });
@@ -188,6 +192,10 @@ const search = tool({
      * Deep research using exa.ai
      * Return the results in markdown format
      */
+    const exa = getExaClient();
+    if (!exa) {
+      return { error: 'Research API not configured' };
+    }
     const result = await exa.searchAndContents(keywords, {
       numResults: 2,
       type: 'keyword',

@@ -3,6 +3,7 @@ import { MapPin, Phone, Mail, Clock, Building, Navigation, Award } from 'lucide-
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { RealScoutOfficeListings } from '@/components/RealScoutOfficeListings';
 import { WhyChooseReasons } from '@/components/WhyChooseReasons';
+import { NearbyAmenitiesSection } from '@/components/NearbyAmenitiesSection';
 
 export const metadata: Metadata = {
   title: 'Office Location | 360 Mike Koizumi Way, Henderson NV | Green Valley Ranch Insider',
@@ -194,63 +195,7 @@ export default async function LocationPage() {
         </div>
       </section>
 
-      {/* Nearby Amenities */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-[#0F172A] mb-8 text-center">
-            Nearby Amenities
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {locationData?.nearby?.amenities?.map((amenity: string, index: number) => (
-              <div
-                key={index}
-                className="bg-gradient-to-br from-[#0F172A] to-slate-900 rounded-xl p-6 text-white border border-slate-700"
-              >
-                <div className="w-12 h-12 bg-[#C5A059] rounded-lg flex items-center justify-center mb-4">
-                  <MapPin className="w-6 h-6 text-[#0F172A]" />
-                </div>
-                <p className="text-slate-300 leading-relaxed">{amenity}</p>
-              </div>
-            )) || (
-              <>
-                <div className="bg-gradient-to-br from-[#0F172A] to-slate-900 rounded-xl p-6 text-white border border-slate-700">
-                  <div className="w-12 h-12 bg-[#C5A059] rounded-lg flex items-center justify-center mb-4">
-                    <MapPin className="w-6 h-6 text-[#0F172A]" />
-                  </div>
-                  <p className="text-slate-300 leading-relaxed">
-                    The District at Green Valley Ranch (shopping & dining)
-                  </p>
-                </div>
-                <div className="bg-gradient-to-br from-[#0F172A] to-slate-900 rounded-xl p-6 text-white border border-slate-700">
-                  <div className="w-12 h-12 bg-[#C5A059] rounded-lg flex items-center justify-center mb-4">
-                    <MapPin className="w-6 h-6 text-[#0F172A]" />
-                  </div>
-                  <p className="text-slate-300 leading-relaxed">
-                    Green Valley Ranch Resort & Spa
-                  </p>
-                </div>
-                <div className="bg-gradient-to-br from-[#0F172A] to-slate-900 rounded-xl p-6 text-white border border-slate-700">
-                  <div className="w-12 h-12 bg-[#C5A059] rounded-lg flex items-center justify-center mb-4">
-                    <MapPin className="w-6 h-6 text-[#0F172A]" />
-                  </div>
-                  <p className="text-slate-300 leading-relaxed">
-                    I-215 freeway access
-                  </p>
-                </div>
-                <div className="bg-gradient-to-br from-[#0F172A] to-slate-900 rounded-xl p-6 text-white border border-slate-700">
-                  <div className="w-12 h-12 bg-[#C5A059] rounded-lg flex items-center justify-center mb-4">
-                    <MapPin className="w-6 h-6 text-[#0F172A]" />
-                  </div>
-                  <p className="text-slate-300 leading-relaxed">
-                    Multiple parks and recreational facilities
-                  </p>
-                </div>
-              </>
-            )}
-          </div>
-        </div>
-      </section>
+      <NearbyAmenitiesSection className="bg-white" showFullList />
 
       {/* Why Choose Dr. Jan Duffy - Condensed */}
       <WhyChooseReasons variant="condensed" showCTA={true} />

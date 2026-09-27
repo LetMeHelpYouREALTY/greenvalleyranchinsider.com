@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { exa } from '@/lib/exa';
+import { getExaClient } from '@/lib/exa';
 
 /**
  * API route to fetch information about the office location
@@ -34,7 +34,8 @@ export async function GET() {
     };
 
     // Only fetch from Exa if API key is available
-    if (process.env.EXA_API_KEY) {
+    const exa = getExaClient();
+    if (exa) {
       try {
         // Search for information about this address
         const searchResults = await exa.searchAndContents(

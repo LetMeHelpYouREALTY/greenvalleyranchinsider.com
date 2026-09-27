@@ -11,6 +11,7 @@ import { NewsletterSignup } from '@/components/NewsletterSignup';
 import { HowIHelp } from '@/components/HowIHelp';
 import { WhyChooseReasons } from '@/components/WhyChooseReasons';
 import { MarketStat } from '@/components/MarketStat';
+import { NearbyAmenitiesSection } from '@/components/NearbyAmenitiesSection';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -143,6 +144,8 @@ export default function Home() {
           <NeighborhoodFocus />
         </div>
       </section>
+
+      <NearbyAmenitiesSection className="bg-slate-50" title="What's Nearby" />
 
       {/* Why Choose Dr. Jan Duffy - Condensed */}
       <WhyChooseReasons variant="condensed" showCTA={true} />

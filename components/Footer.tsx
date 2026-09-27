@@ -134,6 +134,9 @@ export function Footer() {
                   <Link href="/area-guide" className="block text-slate-300 hover:text-[#C5A059] transition-colors text-sm">
                     Area Guide
                   </Link>
+                  <Link href="/amenities" className="block text-slate-300 hover:text-[#C5A059] transition-colors text-sm">
+                    Nearby Amenities
+                  </Link>
                   <Link href="/moving-guide" className="block text-slate-300 hover:text-[#C5A059] transition-colors text-sm">
                     Moving Guide
                   </Link>

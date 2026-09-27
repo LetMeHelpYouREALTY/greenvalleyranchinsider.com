@@ -4,6 +4,7 @@ import { Breadcrumbs } from '@/components/Breadcrumbs';
 import Link from 'next/link';
 import { RealScoutOfficeListings } from '@/components/RealScoutOfficeListings';
 import { WhyChooseReasons } from '@/components/WhyChooseReasons';
+import { NearbyAmenitiesSection } from '@/components/NearbyAmenitiesSection';
 
 export const metadata: Metadata = {
   title: 'Henderson NV Area Guide | Green Valley Ranch Insider | Living in Henderson',
@@ -166,6 +167,8 @@ export default function AreaGuidePage() {
           </div>
         </div>
       </section>
+
+      <NearbyAmenitiesSection className="bg-white" title="Explore the Map" />
 
       {/* Nearby Areas */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
