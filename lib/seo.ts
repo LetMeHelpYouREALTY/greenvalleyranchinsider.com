@@ -20,11 +20,11 @@ export function generatePageMetadata({
   description,
   keywords = [],
   canonical,
-  ogImage = 'https://greenvalleyranchinsider.com/og-image.jpg',
+  ogImage = 'https://www.greenvalleyranchinsider.com/og-image.jpg',
   noindex = false,
   nofollow = false,
 }: PageSEO) {
-  const baseUrl = 'https://greenvalleyranchinsider.com';
+  const baseUrl = 'https://www.greenvalleyranchinsider.com';
   const fullTitle = title.includes('Green Valley Ranch Insider')
     ? title
     : `${title} | Green Valley Ranch Insider`;
@@ -137,12 +137,12 @@ export function generateArticleSchema({
       name: 'Green Valley Ranch Insider',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://greenvalleyranchinsider.com/logo.png',
+        url: 'https://www.greenvalleyranchinsider.com/logo.png',
       },
     },
     datePublished,
     dateModified: dateModified || datePublished,
-    image: image || 'https://greenvalleyranchinsider.com/og-image.jpg',
+    image: image || 'https://www.greenvalleyranchinsider.com/og-image.jpg',
     url,
   };
 }

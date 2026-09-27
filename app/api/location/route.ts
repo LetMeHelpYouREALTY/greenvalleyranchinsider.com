@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { getExaClient } from '@/lib/exa';
+import { getExa } from '@/lib/exa';
 
 /**
  * API route to fetch information about the office location
@@ -34,10 +34,10 @@ export async function GET() {
     };
 
     // Only fetch from Exa if API key is available
-    const exa = getExaClient();
-    if (exa) {
+    if (process.env.EXA_API_KEY) {
       try {
         // Search for information about this address
+        const exa = getExa();
         const searchResults = await exa.searchAndContents(
           `360 Mike Koizumi Way Henderson Nevada 89011 real estate office Berkshire Hathaway`,
           {

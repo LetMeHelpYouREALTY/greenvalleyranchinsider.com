@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   description: 'Complete guide to living in Henderson, Nevada. Information about amenities, dining, shopping, entertainment, and lifestyle in the Green Valley Ranch area.',
   keywords: ['Henderson Nevada guide', 'living in Henderson', 'Henderson amenities', 'Henderson restaurants', 'Henderson shopping', 'Henderson lifestyle', 'Las Vegas area guide'],
   alternates: {
-    canonical: 'https://greenvalleyranchinsider.com/area-guide',
+    canonical: 'https://www.greenvalleyranchinsider.com/area-guide',
   },
   openGraph: {
     title: 'Henderson NV Area Guide | Green Valley Ranch Insider',
     description: 'Complete guide to living in Henderson, Nevada near Green Valley Ranch.',
     type: 'website',
-    url: 'https://greenvalleyranchinsider.com/area-guide',
+    url: 'https://www.greenvalleyranchinsider.com/area-guide',
   },
 };
 

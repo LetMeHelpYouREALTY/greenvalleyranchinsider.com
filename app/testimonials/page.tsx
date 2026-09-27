@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   description: 'Read what clients say about Dr. Jan Duffy\'s real estate services in Green Valley Ranch, Mystic Bay, and The Cottages. Real testimonials from satisfied homeowners.',
   keywords: ['Dr. Jan Duffy reviews', 'Green Valley Ranch real estate testimonials', 'Henderson realtor reviews', 'real estate agent testimonials', 'client reviews Henderson'],
   alternates: {
-    canonical: 'https://greenvalleyranchinsider.com/testimonials',
+    canonical: 'https://www.greenvalleyranchinsider.com/testimonials',
   },
   openGraph: {
     title: 'Client Testimonials | Green Valley Ranch Insider',
     description: 'Read what clients say about Dr. Jan Duffy\'s real estate services in Green Valley Ranch.',
     type: 'website',
-    url: 'https://greenvalleyranchinsider.com/testimonials',
+    url: 'https://www.greenvalleyranchinsider.com/testimonials',
   },
 };
 

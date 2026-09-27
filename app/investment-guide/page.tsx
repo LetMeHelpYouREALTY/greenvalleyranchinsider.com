@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   description: 'Complete guide to real estate investing in Green Valley Ranch, Henderson NV. Market analysis, ROI strategies, and investment opportunities in Mystic Bay, The Cottages, and GVR Estates.',
   keywords: ['real estate investment Henderson', 'Green Valley Ranch investment', 'Henderson rental properties', 'investment properties', 'real estate ROI', 'Henderson investment guide'],
   alternates: {
-    canonical: 'https://greenvalleyranchinsider.com/investment-guide',
+    canonical: 'https://www.greenvalleyranchinsider.com/investment-guide',
   },
   openGraph: {
     title: 'Real Estate Investment Guide | Green Valley Ranch Insider',
     description: 'Complete guide to real estate investing in Green Valley Ranch, Henderson NV.',
     type: 'website',
-    url: 'https://greenvalleyranchinsider.com/investment-guide',
+    url: 'https://www.greenvalleyranchinsider.com/investment-guide',
   },
 };
 

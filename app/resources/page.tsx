@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   description: 'Helpful resources for buyers and sellers in Green Valley Ranch. Guides, calculators, market information, and tools to help with your real estate journey.',
   keywords: ['real estate resources', 'home buying resources', 'home selling resources', 'real estate calculators', 'Henderson real estate tools', 'Green Valley Ranch resources'],
   alternates: {
-    canonical: 'https://greenvalleyranchinsider.com/resources',
+    canonical: 'https://www.greenvalleyranchinsider.com/resources',
   },
   openGraph: {
     title: 'Resources | Green Valley Ranch Insider',
     description: 'Helpful resources for buyers and sellers in Green Valley Ranch, Mystic Bay, and The Cottages.',
     type: 'website',
-    url: 'https://greenvalleyranchinsider.com/resources',
+    url: 'https://www.greenvalleyranchinsider.com/resources',
   },
 };
 

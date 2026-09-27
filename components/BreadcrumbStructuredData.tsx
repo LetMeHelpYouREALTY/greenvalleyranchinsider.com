@@ -8,7 +8,7 @@ type BreadcrumbStructuredDataProps = {
 };
 
 export function BreadcrumbStructuredData({ items }: BreadcrumbStructuredDataProps) {
-  const baseUrl = 'https://greenvalleyranchinsider.com';
+  const baseUrl = 'https://www.greenvalleyranchinsider.com';
   
   const breadcrumbList = {
     '@context': 'https://schema.org',

@@ -1,8 +1,7 @@
-import { localBusinessSchema, personSchema, websiteSchema } from '@/lib/schema';
+import { realEstateAgentSchema, websiteSchema } from '@/lib/schema';
 
 /**
- * Enhanced Schema Markup Component
- * Adds comprehensive E-E-A-T signals including Person, LocalBusiness, and WebSite schemas
+ * Site-wide JSON-LD: single RealEstateAgent entity and WebSite publisher reference.
  */
 export function EnhancedSchema() {
   return (
@@ -10,13 +9,7 @@ export function EnhancedSchema() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(localBusinessSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(personSchema),
+          __html: JSON.stringify(realEstateAgentSchema),
         }}
       />
       <script

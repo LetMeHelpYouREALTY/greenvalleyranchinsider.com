@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   description: 'Complete guide to buying a home in Green Valley Ranch, Mystic Bay, and The Cottages. Expert tips, neighborhood insights, and step-by-step buying process.',
   keywords: ['buying home Henderson', 'Green Valley Ranch buyer guide', 'home buying process', 'first time home buyer Henderson', 'buying in Mystic Bay', 'Henderson real estate buying'],
   alternates: {
-    canonical: 'https://greenvalleyranchinsider.com/buyers-guide',
+    canonical: 'https://www.greenvalleyranchinsider.com/buyers-guide',
   },
   openGraph: {
     title: 'Buyer\'s Guide | Green Valley Ranch Insider',
     description: 'Complete guide to buying a home in Green Valley Ranch, Mystic Bay, and The Cottages.',
     type: 'website',
-    url: 'https://greenvalleyranchinsider.com/buyers-guide',
+    url: 'https://www.greenvalleyranchinsider.com/buyers-guide',
   },
 };
 

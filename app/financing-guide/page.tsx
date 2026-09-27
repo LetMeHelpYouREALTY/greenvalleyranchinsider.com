@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   description: 'Complete guide to home financing in Henderson, NV. Mortgage options, loan types, pre-approval process, and financing tips for Green Valley Ranch homebuyers.',
   keywords: ['home financing Henderson', 'mortgage guide', 'home loan Henderson', 'pre-approval process', 'mortgage options', 'Henderson home financing', 'first-time buyer financing'],
   alternates: {
-    canonical: 'https://greenvalleyranchinsider.com/financing-guide',
+    canonical: 'https://www.greenvalleyranchinsider.com/financing-guide',
   },
   openGraph: {
     title: 'Financing Guide | Green Valley Ranch Insider',
     description: 'Complete guide to home financing in Henderson, NV for Green Valley Ranch homebuyers.',
     type: 'website',
-    url: 'https://greenvalleyranchinsider.com/financing-guide',
+    url: 'https://www.greenvalleyranchinsider.com/financing-guide',
   },
 };
 

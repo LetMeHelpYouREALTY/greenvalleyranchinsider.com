@@ -6,4 +6,4 @@ Allow: /
 Disallow: /api/
 
 # Sitemap
-Sitemap: https://greenvalleyranchinsider.com/sitemap.xml
+Sitemap: https://www.greenvalleyranchinsider.com/sitemap.xml

@@ -25,7 +25,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://greenvalleyranchinsider.com'),
+  metadataBase: new URL('https://www.greenvalleyranchinsider.com'),
   title: {
     default: 'Green Valley Ranch Insider | Henderson NV Real Estate Authority',
     template: '%s | Green Valley Ranch Insider',
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     'home valuation Henderson',
     'property search Henderson',
   ],
-  authors: [{ name: 'Dr. Jan Duffy', url: 'https://greenvalleyranchinsider.com/about' }],
+  authors: [{ name: 'Dr. Jan Duffy', url: 'https://www.greenvalleyranchinsider.com/about' }],
   creator: 'Dr. Jan Duffy',
   publisher: 'Green Valley Ranch Insider',
   applicationName: 'Green Valley Ranch Insider',
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     yahoo: process.env.NEXT_PUBLIC_YAHOO_VERIFICATION,
   },
   alternates: {
-    canonical: 'https://greenvalleyranchinsider.com',
+    canonical: 'https://www.greenvalleyranchinsider.com',
   },
   openGraph: {
     title: 'Green Valley Ranch Insider | Henderson NV Real Estate Authority',
@@ -83,10 +83,10 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'Green Valley Ranch Insider',
-    url: 'https://greenvalleyranchinsider.com',
+    url: 'https://www.greenvalleyranchinsider.com',
     images: [
       {
-        url: 'https://greenvalleyranchinsider.com/og-image.jpg',
+        url: 'https://www.greenvalleyranchinsider.com/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Green Valley Ranch Insider - Henderson NV Real Estate Authority',
@@ -98,7 +98,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Green Valley Ranch Insider | Henderson NV Real Estate Authority',
     description: 'Expert insights and premium listing services for Mystic Bay, The Cottages, and the Green Valley Ranch community.',
-    images: ['https://greenvalleyranchinsider.com/og-image.jpg'],
+    images: ['https://www.greenvalleyranchinsider.com/og-image.jpg'],
     creator: '@drjanduffy',
     site: '@greenvalleyranchinsider',
   },
@@ -130,8 +130,6 @@ export default function RootLayout({
             <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
           </>
         )}
-        {/* Canonical URL */}
-        <link rel="canonical" href="https://greenvalleyranchinsider.com" />
         {/* Favicon and Icons */}
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />

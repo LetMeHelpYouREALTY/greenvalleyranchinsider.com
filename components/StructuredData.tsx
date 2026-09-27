@@ -16,7 +16,7 @@ export function StructuredData({ type, data }: StructuredDataProps) {
     jobTitle: 'Real Estate Agent',
     email: 'DrDuffy@GreenValleyRanchInsider.com',
     telephone: ['+17025001955', '+17022221964'],
-    url: 'https://greenvalleyranchinsider.com',
+    url: 'https://www.greenvalleyranchinsider.com',
     address: {
       '@type': 'PostalAddress',
       streetAddress: '360 Mike Koizumi Way',
@@ -62,9 +62,9 @@ export function StructuredData({ type, data }: StructuredDataProps) {
     ...baseData,
     '@type': 'LocalBusiness',
     name: 'Green Valley Ranch Insider',
-    image: 'https://greenvalleyranchinsider.com/og-image.jpg',
-    '@id': 'https://greenvalleyranchinsider.com/#organization',
-    url: 'https://greenvalleyranchinsider.com',
+    image: 'https://www.greenvalleyranchinsider.com/og-image.jpg',
+    '@id': 'https://www.greenvalleyranchinsider.com/#organization',
+    url: 'https://www.greenvalleyranchinsider.com',
     telephone: '+17025001955',
     priceRange: '$$',
     address: {
@@ -100,12 +100,12 @@ export function StructuredData({ type, data }: StructuredDataProps) {
     ...baseData,
     '@type': 'WebSite',
     name: 'Green Valley Ranch Insider',
-    url: 'https://greenvalleyranchinsider.com',
+    url: 'https://www.greenvalleyranchinsider.com',
     potentialAction: {
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: 'https://greenvalleyranchinsider.com/search?q={search_term_string}',
+        urlTemplate: 'https://www.greenvalleyranchinsider.com/search?q={search_term_string}',
       },
       'query-input': 'required name=search_term_string',
     },

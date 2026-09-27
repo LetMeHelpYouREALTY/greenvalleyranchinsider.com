@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   description: 'Complete guide to schools serving Green Valley Ranch, Mystic Bay, and The Cottages. Information about Vanderburg Elementary, Glen Taylor Elementary, and area schools.',
   keywords: ['Green Valley Ranch schools', 'Henderson schools', 'Vanderburg Elementary', 'Glen Taylor Elementary', 'Coronado High School', 'school ratings Henderson', '89052 schools'],
   alternates: {
-    canonical: 'https://greenvalleyranchinsider.com/schools',
+    canonical: 'https://www.greenvalleyranchinsider.com/schools',
   },
   openGraph: {
     title: 'School Information | Green Valley Ranch Insider',
     description: 'Complete guide to schools serving Green Valley Ranch, Mystic Bay, and The Cottages.',
     type: 'website',
-    url: 'https://greenvalleyranchinsider.com/schools',
+    url: 'https://www.greenvalleyranchinsider.com/schools',
   },
 };
 

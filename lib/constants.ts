@@ -5,7 +5,7 @@
 
 export const SITE_CONFIG = {
   name: 'Green Valley Ranch Insider',
-  url: 'https://greenvalleyranchinsider.com',
+  url: 'https://www.greenvalleyranchinsider.com',
   description: 'Expert insights and premium listing services for Mystic Bay, The Cottages, and the Green Valley Ranch community.',
 } as const;
 

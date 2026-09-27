@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   description: 'Complete guide to staging your home for sale in Green Valley Ranch. Expert tips, room-by-room staging advice, and strategies to maximize your sale price.',
   keywords: ['home staging Henderson', 'staging tips', 'home staging guide', 'how to stage home', 'home staging for sale', 'Green Valley Ranch staging'],
   alternates: {
-    canonical: 'https://greenvalleyranchinsider.com/home-staging',
+    canonical: 'https://www.greenvalleyranchinsider.com/home-staging',
   },
   openGraph: {
     title: 'Home Staging Guide | Green Valley Ranch Insider',
     description: 'Complete guide to staging your home for sale in Green Valley Ranch, Henderson NV.',
     type: 'website',
-    url: 'https://greenvalleyranchinsider.com/home-staging',
+    url: 'https://www.greenvalleyranchinsider.com/home-staging',
   },
 };
 
