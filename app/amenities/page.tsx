@@ -15,7 +15,7 @@ import {
 } from '@/lib/community-amenities';
 import { CONTACT_INFO } from '@/lib/constants';
 import { generateFAQSchema } from '@/lib/seo';
-import { localBusinessSchema } from '@/lib/schema';
+import { realEstateAgentSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: `Nearby Amenities in ${COMMUNITY_MAP.name}, Henderson NV`,
@@ -70,7 +70,7 @@ const categorySections = [
   {
     id: 'schools',
     title: 'Schools',
-    body: `${COMMUNITY_MAP.name} is served by the Clark County School District. Area schools frequently referenced by families include Neil C. Twitchell Elementary, Bob Miller Middle School, Greenspun Junior High, and Coronado High School—confirm your assigned zone with the district for your exact address.`,
+    body: `${COMMUNITY_MAP.name} is served by the Clark County School District. Which CCSD schools are assigned to your address depends on your exact street—verify with the CCSD Zoning Search. Nearby campuses often discussed with buyers include Neil C. Twitchell Elementary, Bob Miller Middle School, Greenspun Junior High, and Coronado High School.`,
   },
   {
     id: 'commute',
@@ -84,9 +84,11 @@ export default function AmenitiesPage() {
   const itemListSchema = buildAmenitiesItemListSchema();
 
   const agentSchema = {
-    ...localBusinessSchema,
+    ...realEstateAgentSchema,
     areaServed: [
-      ...(Array.isArray(localBusinessSchema.areaServed) ? localBusinessSchema.areaServed : []),
+      ...(Array.isArray(realEstateAgentSchema.areaServed)
+        ? realEstateAgentSchema.areaServed
+        : []),
       {
         '@type': 'Place',
         name: COMMUNITY_MAP.name,
@@ -129,7 +131,7 @@ export default function AmenitiesPage() {
           <h2 className="text-2xl font-bold text-[#0F172A] mb-6">Interactive amenity map</h2>
           <p className="text-slate-600 mb-8">
             Use the category filters to explore places near the center of {COMMUNITY_MAP.name} (mapped
-            at The District). Map data loads when you scroll here; without a Google Maps API key, a
+            at The District). The map loads when you scroll here; if live map data is unavailable, a
             static map and curated list still display.
           </p>
           <AmenityMap showCuratedList />

@@ -1,7 +1,6 @@
 /**
  * Green Valley Ranch community map center and curated nearby places.
  * Map center: The District at Green Valley Ranch (community retail hub).
- * Coordinates source: Wikipedia 36°01′17″N 115°05′12″W (36.021418, -115.086749).
  */
 
 import { SITE_CONFIG } from '@/lib/constants';
@@ -17,7 +16,7 @@ export const COMMUNITY_MAP = {
   },
   centerLabel: 'Green Valley Ranch',
   centerAddress: 'The District at Green Valley Ranch, Henderson, NV 89052',
-  searchRadiusMeters: 8000,
+  searchRadiusMeters: 5000,
   embedZoom: 14,
 } as const;
 
@@ -42,7 +41,6 @@ export type AmenityCategory = {
   ariaLabel: string;
 };
 
-/** Master-planned family community — standard category order per spec */
 export const AMENITY_CATEGORIES: AmenityCategory[] = [
   {
     id: 'restaurants',
@@ -117,6 +115,7 @@ export type CuratedPlace = {
   address: string;
   category: AmenityCategoryId;
   schemaType: string;
+  sourceUrl: string;
   note?: string;
 };
 
@@ -127,13 +126,15 @@ export const CURATED_NEARBY_PLACES: CuratedPlace[] = [
     address: '2240 Village Walk Dr, Henderson, NV 89052',
     category: 'shopping',
     schemaType: 'ShoppingCenter',
+    sourceUrl: 'https://shopthedistrictgvr.com/contact-us/',
     note: 'Open-air shopping, dining, and entertainment in the heart of Green Valley Ranch.',
   },
   {
     name: 'Green Valley Ranch Resort, Spa and Casino',
-    address: '2300 Paseo Verde Pkwy, Henderson, NV 89074',
+    address: '2300 Paseo Verde Pkwy, Henderson, NV 89052',
     category: 'shopping',
     schemaType: 'Resort',
+    sourceUrl: 'https://greenvalleyranch.com/',
     note: 'Resort with dining, spa, and entertainment options for residents.',
   },
   {
@@ -141,6 +142,8 @@ export const CURATED_NEARBY_PLACES: CuratedPlace[] = [
     address: '250 S Green Valley Pkwy, Henderson, NV 89012',
     category: 'parks',
     schemaType: 'SportsActivityLocation',
+    sourceUrl:
+      'https://www.cityofhenderson.com/Home/Components/FacilityDirectory/FacilityDirectory/162/',
     note: 'City recreation center with pools, fitness, and community programs.',
   },
   {
@@ -148,36 +151,43 @@ export const CURATED_NEARBY_PLACES: CuratedPlace[] = [
     address: '3001 St Rose Pkwy, Henderson, NV 89052',
     category: 'healthcare',
     schemaType: 'Hospital',
+    sourceUrl: 'https://www.dignityhealth.org/las-vegas/locations/siena',
   },
   {
     name: 'Coronado High School',
     address: '1001 Coronado Center Dr, Henderson, NV 89052',
     category: 'schools',
     schemaType: 'School',
+    sourceUrl: 'https://www.cityofhenderson.com/Home/Components/FacilityDirectory/FacilityDirectory/115/2216',
   },
   {
     name: 'Neil C. Twitchell Elementary School',
-    address: '3925 E Patrick Ln, Henderson, NV 89014',
+    address: '2060 Desert Shadow Trail, Henderson, NV 89012',
     category: 'schools',
     schemaType: 'School',
+    sourceUrl:
+      'https://www.cityofhenderson.com/Home/Components/FacilityDirectory/FacilityDirectory/133/2216',
   },
   {
     name: 'Bob Miller Middle School',
-    address: '2400 Cozy Hill St, Henderson, NV 89014',
+    address: '2400 Cozy Hill Cir, Henderson, NV 89052',
     category: 'schools',
     schemaType: 'School',
+    sourceUrl: 'https://www.bobmillerms.com/',
   },
   {
     name: 'DragonRidge Country Club',
     address: '552 S Stephanie St, Henderson, NV 89012',
     category: 'golf',
     schemaType: 'GolfCourse',
+    sourceUrl: 'https://dragonridge.com/contact-us/',
   },
   {
     name: 'Greenspun Junior High School',
-    address: '1000 N Green Valley Pkwy, Henderson, NV 89074',
+    address: '140 N Valle Verde Dr, Henderson, NV 89074',
     category: 'schools',
     schemaType: 'School',
+    sourceUrl: 'https://www.greenspunjhs.com/',
   },
 ];
 
@@ -198,9 +208,9 @@ export const AMENITIES_PAGE_FAQ = [
       'Yes. St. Rose Dominican Hospital, Siena Campus on St Rose Parkway serves the Green Valley area, with additional medical offices and urgent care options nearby.',
   },
   {
-    question: 'What schools serve Green Valley Ranch?',
+    question: 'Which CCSD schools are assigned to Green Valley Ranch addresses?',
     answer:
-      'Green Valley Ranch is in the Clark County School District; area schools include Neil C. Twitchell Elementary, Bob Miller Middle School, Coronado High School, and Greenspun Junior High—verify attendance zones for your address.',
+      'Attendance zones vary by street and village within Green Valley Ranch. Verify your assigned schools with the Clark County School District Zoning Search before you buy or lease.',
   },
   {
     question: 'How far is Harry Reid International Airport from Green Valley Ranch?',
@@ -249,6 +259,7 @@ export function buildAmenitiesItemListSchema() {
       item: {
         '@type': place.schemaType,
         name: place.name,
+        url: place.sourceUrl,
         address: {
           '@type': 'PostalAddress',
           streetAddress: place.address.split(',')[0]?.trim(),
