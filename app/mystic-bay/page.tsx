@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   description: 'Mystic Bay is a peaceful neighborhood in Henderson, NV with 212 residents, $94K average income, and 68% homeowners. Known for well-maintained homes, friendly community, and perfect for families and retirees.',
   keywords: ['Mystic Bay Henderson NV', 'Mystic Bay neighborhood', 'Henderson Nevada neighborhoods', 'Green Valley Ranch', 'family friendly Henderson', 'retiree community Henderson'],
   alternates: {
-    canonical: 'https://greenvalleyranchinsider.com/mystic-bay',
+    canonical: 'https://www.greenvalleyranchinsider.com/mystic-bay',
   },
   openGraph: {
     title: 'Mystic Bay Henderson NV | Neighborhood Spotlight',
     description: 'A peaceful neighborhood known for well-maintained homes and friendly community. Perfect for families and retirees.',
     type: 'website',
-    url: 'https://greenvalleyranchinsider.com/mystic-bay',
+    url: 'https://www.greenvalleyranchinsider.com/mystic-bay',
   },
 };
 

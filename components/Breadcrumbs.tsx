@@ -1,7 +1,6 @@
-'use client';
-
 import Link from 'next/link';
 import { ChevronRight, Home } from 'lucide-react';
+import { SITE_CONFIG } from '@/lib/constants';
 import { generateBreadcrumbSchema } from '@/lib/seo';
 
 interface BreadcrumbItem {
@@ -15,30 +14,28 @@ interface BreadcrumbsProps {
 }
 
 /**
- * Breadcrumb Navigation Component with Schema Markup
- * Improves SEO and user navigation
+ * Breadcrumb navigation with server-rendered BreadcrumbList JSON-LD.
  */
 export function Breadcrumbs({ items, className = '' }: BreadcrumbsProps) {
-  // Generate breadcrumb schema
+  const baseUrl = SITE_CONFIG.url;
+
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://greenvalleyranchinsider.com' },
-    ...items.map(item => ({
+    { name: 'Home', url: baseUrl },
+    ...items.map((item) => ({
       name: item.name,
-      url: `https://greenvalleyranchinsider.com${item.href}`,
+      url: `${baseUrl}${item.href}`,
     })),
   ]);
 
   return (
     <>
-      {/* Breadcrumb Schema Markup */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(breadcrumbSchema),
         }}
       />
-      
-      {/* Visual Breadcrumb Navigation */}
+
       <nav
         aria-label="Breadcrumb"
         className={`flex items-center space-x-2 text-sm ${className}`}
@@ -55,7 +52,7 @@ export function Breadcrumbs({ items, className = '' }: BreadcrumbsProps) {
             </Link>
             <meta itemProp="position" content="1" />
           </li>
-          
+
           {items.map((item, index) => (
             <li
               key={item.href}

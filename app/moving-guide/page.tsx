@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   description: 'Complete guide to moving to Green Valley Ranch, Henderson NV. Utilities, services, change of address, and everything you need to know for your relocation.',
   keywords: ['moving to Henderson', 'relocation guide Henderson', 'moving to Green Valley Ranch', 'Henderson utilities', 'change of address Henderson', 'moving checklist'],
   alternates: {
-    canonical: 'https://greenvalleyranchinsider.com/moving-guide',
+    canonical: 'https://www.greenvalleyranchinsider.com/moving-guide',
   },
   openGraph: {
     title: 'Moving Guide | Green Valley Ranch Insider',
     description: 'Complete guide to moving to Green Valley Ranch, Henderson NV.',
     type: 'website',
-    url: 'https://greenvalleyranchinsider.com/moving-guide',
+    url: 'https://www.greenvalleyranchinsider.com/moving-guide',
   },
 };
 

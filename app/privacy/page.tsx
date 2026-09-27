@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Privacy Policy | Green Valley Ranch Insider | Henderson NV Real Estate',
   description: 'Privacy policy for Green Valley Ranch Insider. Learn how we collect, use, and protect your personal information.',
   alternates: {
-    canonical: 'https://greenvalleyranchinsider.com/privacy',
+    canonical: 'https://www.greenvalleyranchinsider.com/privacy',
   },
   robots: {
     index: true,

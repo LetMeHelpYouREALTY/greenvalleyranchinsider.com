@@ -1,6 +1,7 @@
 'use client';
 
 import { Star } from 'lucide-react';
+import { AGENT_ID } from '@/lib/schema';
 
 interface Testimonial {
   id: string;
@@ -58,8 +59,7 @@ const reviewSchema = testimonials.map(t => ({
   "@context": "https://schema.org",
   "@type": "Review",
   "itemReviewed": {
-    "@type": "RealEstateAgent",
-    "name": "Dr. Jan Duffy"
+    "@id": AGENT_ID
   },
   "reviewRating": {
     "@type": "Rating",

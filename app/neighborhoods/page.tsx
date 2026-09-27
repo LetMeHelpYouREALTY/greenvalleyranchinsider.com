@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   description: 'Explore all neighborhoods in Green Valley Ranch including Mystic Bay, The Cottages, and GVR Estates. Compare communities to find your perfect home.',
   keywords: ['Green Valley Ranch neighborhoods', 'Henderson neighborhoods', 'Mystic Bay', 'The Cottages', 'GVR Estates', 'gated communities Henderson', 'Henderson NV communities'],
   alternates: {
-    canonical: 'https://greenvalleyranchinsider.com/neighborhoods',
+    canonical: 'https://www.greenvalleyranchinsider.com/neighborhoods',
   },
   openGraph: {
     title: 'Neighborhoods | Green Valley Ranch Insider',
     description: 'Explore all neighborhoods in Green Valley Ranch including Mystic Bay, The Cottages, and GVR Estates.',
     type: 'website',
-    url: 'https://greenvalleyranchinsider.com/neighborhoods',
+    url: 'https://www.greenvalleyranchinsider.com/neighborhoods',
   },
 };
 

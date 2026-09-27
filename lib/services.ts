@@ -12,7 +12,7 @@ import {
 } from '@/lib/types';
 import { sendSlackMessageWithButtons } from '@/lib/slack';
 import { z } from 'zod';
-import { exa } from '@/lib/exa';
+import { getExa } from '@/lib/exa';
 
 /**
  * Qualify the lead
@@ -120,7 +120,7 @@ export const fetchUrl = tool({
     url: z.string().describe('Absolute URL, including http:// or https://')
   }),
   execute: async ({ url }) => {
-    const result = await exa.getContents(url, {
+    const result = await getExa().getContents(url, {
       text: true
     });
     return result;
@@ -188,7 +188,7 @@ const search = tool({
      * Deep research using exa.ai
      * Return the results in markdown format
      */
-    const result = await exa.searchAndContents(keywords, {
+    const result = await getExa().searchAndContents(keywords, {
       numResults: 2,
       type: 'keyword',
       category: resultCategory,

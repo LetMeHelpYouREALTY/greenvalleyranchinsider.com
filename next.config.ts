@@ -18,6 +18,10 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
+        hostname: 'www.greenvalleyranchinsider.com',
+      },
+      {
+        protocol: 'https',
         hostname: 'greenvalleyranchinsider.com',
       },
       {

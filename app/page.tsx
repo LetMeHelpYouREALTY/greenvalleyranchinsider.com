@@ -12,10 +12,14 @@ import { HowIHelp } from '@/components/HowIHelp';
 import { WhyChooseReasons } from '@/components/WhyChooseReasons';
 import { MarketStat } from '@/components/MarketStat';
 import type { Metadata } from 'next';
+import { HomePageFaq } from '@/components/HomePageFaq';
+
+const homeDescription =
+  'Green Valley Ranch Henderson real estate: Mystic Bay, The Cottages, and GVR homes. Dr. Jan Duffy helps buyers and sellers with search, valuations, and local insight.';
 
 export const metadata: Metadata = {
   title: 'Green Valley Ranch Insider | Henderson NV Real Estate Authority',
-  description: 'A Green Valley Henderson home (around zip code 89044) just sold for $688K on Marywood Park. Get every Green Valley Ranch sale before Zillow posts it. Expert real estate services for Mystic Bay, The Cottages, and Green Valley Ranch.',
+  description: homeDescription,
   keywords: [
     'Green Valley Ranch',
     'Henderson NV real estate',
@@ -30,13 +34,21 @@ export const metadata: Metadata = {
     'real estate agent Henderson NV',
   ],
   alternates: {
-    canonical: 'https://greenvalleyranchinsider.com',
+    canonical: 'https://www.greenvalleyranchinsider.com',
   },
   openGraph: {
     title: 'Green Valley Ranch Insider | Henderson NV Real Estate Authority',
-    description: 'A Green Valley Henderson home (around zip code 89044) just sold for $688K on Marywood Park. Get every Green Valley Ranch sale before Zillow posts it. Expert real estate services for Mystic Bay, The Cottages, and Green Valley Ranch.',
-    url: 'https://greenvalleyranchinsider.com',
+    description: homeDescription,
+    url: 'https://www.greenvalleyranchinsider.com',
     type: 'website',
+    images: [
+      {
+        url: 'https://www.greenvalleyranchinsider.com/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Green Valley Ranch Insider - Henderson NV Real Estate',
+      },
+    ],
   },
 };
 
@@ -157,6 +169,8 @@ export default function Home() {
         priceMin={400000}
         priceMax={700000}
       />
+
+      <HomePageFaq />
 
       {/* Newsletter Signup Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">

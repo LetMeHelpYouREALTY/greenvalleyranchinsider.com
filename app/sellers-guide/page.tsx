@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   description: 'Complete guide to selling your home in Green Valley Ranch, Mystic Bay, and The Cottages. Expert tips, pricing strategy, and step-by-step selling process.',
   keywords: ['selling home Henderson', 'Green Valley Ranch seller guide', 'home selling process', 'how to sell home', 'selling in Mystic Bay', 'Henderson real estate selling'],
   alternates: {
-    canonical: 'https://greenvalleyranchinsider.com/sellers-guide',
+    canonical: 'https://www.greenvalleyranchinsider.com/sellers-guide',
   },
   openGraph: {
     title: 'Seller\'s Guide | Green Valley Ranch Insider',
     description: 'Complete guide to selling your home in Green Valley Ranch, Mystic Bay, and The Cottages.',
     type: 'website',
-    url: 'https://greenvalleyranchinsider.com/sellers-guide',
+    url: 'https://www.greenvalleyranchinsider.com/sellers-guide',
   },
 };
 

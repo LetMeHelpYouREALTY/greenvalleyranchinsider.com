@@ -4,19 +4,28 @@ import { Breadcrumbs } from '@/components/Breadcrumbs';
 import Link from 'next/link';
 import { RealScoutOfficeListings } from '@/components/RealScoutOfficeListings';
 import { WhyChooseReasons } from '@/components/WhyChooseReasons';
+import { generateFAQSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions | Green Valley Ranch Insider',
   description: 'Common questions about selling your home in Green Valley Ranch, Mystic Bay, and The Cottages. Get answers about home valuations, market trends, and the selling process.',
   keywords: ['Green Valley Ranch FAQ', 'Henderson real estate questions', 'selling home FAQ', 'home valuation questions'],
   alternates: {
-    canonical: 'https://greenvalleyranchinsider.com/faq',
+    canonical: 'https://www.greenvalleyranchinsider.com/faq',
   },
   openGraph: {
     title: 'Frequently Asked Questions | Green Valley Ranch Insider',
     description: 'Common questions about selling your home in Green Valley Ranch, Mystic Bay, and The Cottages.',
     type: 'website',
-    url: 'https://greenvalleyranchinsider.com/faq',
+    url: 'https://www.greenvalleyranchinsider.com/faq',
+    images: [
+      {
+        url: 'https://www.greenvalleyranchinsider.com/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Green Valley Ranch Insider FAQ',
+      },
+    ],
   },
 };
 
@@ -56,8 +65,14 @@ const faqs = [
 ];
 
 export default function FAQPage() {
+  const faqSchema = generateFAQSchema(faqs);
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Hero Section */}
       <section className="relative bg-[#0F172A] text-white py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">

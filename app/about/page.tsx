@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   description: 'Meet Dr. Jan Duffy, a top-performing real estate agent with 30+ years of experience in Las Vegas and Henderson. Expert in Green Valley Ranch, Mystic Bay, and The Cottages communities.',
   keywords: ['Dr. Jan Duffy', 'Henderson real estate agent', 'Green Valley Ranch realtor', 'Berkshire Hathaway agent', 'Las Vegas real estate expert', 'top real estate agent Henderson'],
   alternates: {
-    canonical: 'https://greenvalleyranchinsider.com/about',
+    canonical: 'https://www.greenvalleyranchinsider.com/about',
   },
   openGraph: {
     title: 'About Dr. Jan Duffy | Green Valley Ranch Insider',
     description: 'Meet Dr. Jan Duffy, a top-performing real estate agent with 30+ years of experience in Las Vegas and Henderson.',
     type: 'website',
-    url: 'https://greenvalleyranchinsider.com/about',
+    url: 'https://www.greenvalleyranchinsider.com/about',
   },
 };
 

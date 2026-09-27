@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Terms of Service | Green Valley Ranch Insider | Henderson NV Real Estate',
   description: 'Terms of service for Green Valley Ranch Insider. Please read our terms and conditions for using our website and services.',
   alternates: {
-    canonical: 'https://greenvalleyranchinsider.com/terms',
+    canonical: 'https://www.greenvalleyranchinsider.com/terms',
   },
   robots: {
     index: true,

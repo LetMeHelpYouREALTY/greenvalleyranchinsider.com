@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   description: 'Visit our office at 360 Mike Koizumi Way in Henderson, Nevada. Conveniently located in Green Valley near The District at Green Valley Ranch.',
   keywords: ['office location', 'Henderson NV real estate office', '360 Mike Koizumi Way', 'Berkshire Hathaway Henderson', 'Green Valley Ranch office'],
   alternates: {
-    canonical: 'https://greenvalleyranchinsider.com/location',
+    canonical: 'https://www.greenvalleyranchinsider.com/location',
   },
   openGraph: {
     title: 'Office Location | 360 Mike Koizumi Way, Henderson NV',
     description: 'Visit our office at 360 Mike Koizumi Way in Henderson, Nevada. Conveniently located in Green Valley near The District at Green Valley Ranch.',
     type: 'website',
-    url: 'https://greenvalleyranchinsider.com/location',
+    url: 'https://www.greenvalleyranchinsider.com/location',
   },
 };
 
@@ -318,35 +318,6 @@ export default async function LocationPage() {
         </div>
       </section>
 
-      {/* Location Schema JSON-LD */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'RealEstateAgent',
-            name: 'Dr. Jan Duffy',
-            address: {
-              '@type': 'PostalAddress',
-              streetAddress: '360 Mike Koizumi Way',
-              addressLocality: 'Henderson',
-              addressRegion: 'NV',
-              postalCode: '89011',
-              addressCountry: 'US',
-            },
-            geo: {
-              '@type': 'GeoCoordinates',
-              latitude: '36.0395',
-              longitude: '-115.0442',
-            },
-            telephone: ['+17025001955', '+17022221964'],
-            email: 'DrDuffy@GreenValleyRanchInsider.com',
-            url: 'https://greenvalleyranchinsider.com',
-            openingHours: 'Mo-Fr 09:00-18:00, Sa 10:00-16:00',
-            priceRange: '$$',
-          }),
-        }}
-      />
     </main>
   );
 }

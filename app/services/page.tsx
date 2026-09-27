@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   description: 'Comprehensive real estate services for sellers and buyers in Green Valley Ranch, Mystic Bay, and The Cottages. Home valuations, marketing, and expert guidance.',
   keywords: ['real estate services Henderson', 'home selling services', 'home buying services', 'property marketing', 'home valuation services', 'Green Valley Ranch real estate'],
   alternates: {
-    canonical: 'https://greenvalleyranchinsider.com/services',
+    canonical: 'https://www.greenvalleyranchinsider.com/services',
   },
   openGraph: {
     title: 'Real Estate Services | Green Valley Ranch Insider',
     description: 'Comprehensive real estate services for sellers and buyers in Green Valley Ranch, Mystic Bay, and The Cottages.',
     type: 'website',
-    url: 'https://greenvalleyranchinsider.com/services',
+    url: 'https://www.greenvalleyranchinsider.com/services',
   },
 };
 

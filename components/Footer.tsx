@@ -268,64 +268,6 @@ export function Footer() {
         </div>
       </div>
 
-      {/* LocalBusiness Schema JSON-LD */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'RealEstateAgent',
-            '@id': 'https://greenvalleyranchinsider.com/#organization',
-            name: 'Dr. Jan Duffy',
-            jobTitle: 'Real Estate Agent',
-            email: 'DrDuffy@GreenValleyRanchInsider.com',
-            telephone: ['+17025001955', '+17022221964'],
-            url: 'https://greenvalleyranchinsider.com',
-            address: {
-              '@type': 'PostalAddress',
-              streetAddress: '360 Mike Koizumi Way',
-              addressLocality: 'Henderson',
-              addressRegion: 'NV',
-              postalCode: '89011',
-              addressCountry: 'US'
-            },
-            worksFor: {
-              '@type': 'RealEstateAgent',
-              name: 'Berkshire Hathaway HomeServices Nevada Properties',
-              '@id': 'https://www.berkshirehathawayhs.com/',
-              address: {
-                '@type': 'PostalAddress',
-                streetAddress: '360 Mike Koizumi Way',
-                addressLocality: 'Henderson',
-                addressRegion: 'NV',
-                postalCode: '89011',
-                addressCountry: 'US'
-              }
-            },
-            areaServed: [
-              {
-                '@type': 'City',
-                name: 'Henderson',
-                addressRegion: 'NV'
-              },
-              {
-                '@type': 'City',
-                name: 'Las Vegas',
-                addressRegion: 'NV'
-              }
-            ],
-            knowsAbout: [
-              'Green Valley Ranch',
-              'Mystic Bay',
-              'The Cottages',
-              'GVR Estates',
-              'Henderson Real Estate',
-              'Home Valuation',
-              'Property Sales'
-            ]
-          })
-        }}
-      />
     </footer>
   );
 }

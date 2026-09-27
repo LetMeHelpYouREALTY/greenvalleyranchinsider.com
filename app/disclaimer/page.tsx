@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Disclaimer | Green Valley Ranch Insider | Henderson NV Real Estate',
   description: 'Disclaimer for Green Valley Ranch Insider. Important information about property valuations, market data, and real estate services.',
   alternates: {
-    canonical: 'https://greenvalleyranchinsider.com/disclaimer',
+    canonical: 'https://www.greenvalleyranchinsider.com/disclaimer',
   },
   robots: {
     index: true,

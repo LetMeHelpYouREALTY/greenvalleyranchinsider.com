@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   description: 'Current market trends, statistics, and insights for Green Valley Ranch, Mystic Bay, and The Cottages. Expert analysis of Henderson NV real estate market.',
   keywords: ['Henderson real estate market', 'Green Valley Ranch market trends', 'Henderson home prices', 'real estate market analysis', 'Henderson NV market statistics', '89052 real estate'],
   alternates: {
-    canonical: 'https://greenvalleyranchinsider.com/market-insights',
+    canonical: 'https://www.greenvalleyranchinsider.com/market-insights',
   },
   openGraph: {
     title: 'Market Insights | Green Valley Ranch Insider',
     description: 'Current market trends, statistics, and insights for Green Valley Ranch, Mystic Bay, and The Cottages.',
     type: 'website',
-    url: 'https://greenvalleyranchinsider.com/market-insights',
+    url: 'https://www.greenvalleyranchinsider.com/market-insights',
   },
 };
 
