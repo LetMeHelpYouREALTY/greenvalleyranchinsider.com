@@ -15,7 +15,7 @@ import type { Metadata } from 'next';
 import { HomePageFaq } from '@/components/HomePageFaq';
 
 const homeDescription =
-  'Green Valley Ranch Henderson real estate: Mystic Bay, The Cottages, and GVR homes. Dr. Jan Duffy helps buyers and sellers with search, valuations, and local insight.';
+  'Green Valley Ranch Henderson homes: Mystic Bay, The Cottages & GVR. Dr. Jan Duffy helps buyers and sellers with search, valuations, and local insight.';
 
 export const metadata: Metadata = {
   title: 'Green Valley Ranch Insider | Henderson NV Real Estate Authority',
