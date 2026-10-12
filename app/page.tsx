@@ -18,7 +18,7 @@ const homeDescription =
   'Green Valley Ranch Henderson homes: Mystic Bay, The Cottages & GVR. Dr. Jan Duffy helps buyers and sellers with search, valuations, and local insight.';
 
 export const metadata: Metadata = {
-  title: 'Green Valley Ranch Insider | Henderson NV Real Estate Authority',
+  title: 'Green Valley Ranch Henderson Home Sales | Dr. Jan Duffy',
   description: homeDescription,
   keywords: [
     'Green Valley Ranch',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.greenvalleyranchinsider.com',
   },
   openGraph: {
-    title: 'Green Valley Ranch Insider | Henderson NV Real Estate Authority',
+    title: 'Green Valley Ranch Henderson Home Sales | Dr. Jan Duffy',
     description: homeDescription,
     url: 'https://www.greenvalleyranchinsider.com',
     type: 'website',
@@ -65,7 +65,7 @@ export default function Home() {
           </div>
           
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            A Green Valley Henderson Home <span className="text-[#C5A059]">(around zip code 89044)</span> Just Sold for <span className="text-[#C5A059]">$688K</span> on Marywood Park
+            Green Valley Ranch Henderson Home Sales &amp; Market Update
           </h1>
           
           <p className="text-xl sm:text-2xl text-slate-300 mb-8 max-w-2xl mx-auto">
@@ -98,6 +98,14 @@ export default function Home() {
               className="inline-flex items-center justify-center px-6 py-4 text-lg font-semibold bg-transparent border-2 border-[#C5A059] text-[#C5A059] rounded-lg hover:bg-[#C5A059]/10 transition-colors"
             >
               Call (702) 222-1964
+            </a>
+            <a
+              href="https://calendly.com/drjanduffy/listing-consultation?utm_source=greenvalleyranchinsider.com&utm_medium=website&utm_content=home-hero-seller"
+              className="inline-flex items-center justify-center px-6 py-4 text-lg font-semibold bg-transparent border-2 border-white/40 text-white rounded-lg hover:bg-white/10 transition-colors"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Book a Listing Consultation with Dr. Jan Duffy
             </a>
           </div>
         </div>

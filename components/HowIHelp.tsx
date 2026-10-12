@@ -111,14 +111,24 @@ export function HowIHelp() {
           </div>
           <div className="bg-gradient-to-br from-[#0F172A] to-slate-900 rounded-xl p-8 text-white text-center">
             <p className="text-xl font-semibold mb-4">Ready to sell your Green Valley Ranch home?</p>
-            <a
-              href="tel:+17022221964"
-              onClick={() => trackPhoneClick('7022221964')}
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#C5A059] text-[#0F172A] rounded-lg font-semibold hover:bg-[#B8914F] transition-colors shadow-lg text-lg"
-            >
-              <Phone className="w-5 h-5" />
-              Get Your Home&apos;s Current Value
-            </a>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href="tel:+17022221964"
+                onClick={() => trackPhoneClick('7022221964')}
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#C5A059] text-[#0F172A] rounded-lg font-semibold hover:bg-[#B8914F] transition-colors shadow-lg text-lg"
+              >
+                <Phone className="w-5 h-5" />
+                Get Your Home&apos;s Current Value
+              </a>
+              <a
+                href="https://calendly.com/drjanduffy/listing-consultation?utm_source=greenvalleyranchinsider.com&utm_medium=website&utm_content=how-i-help-seller"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-transparent border-2 border-[#C5A059] text-[#C5A059] rounded-lg font-semibold hover:bg-[#C5A059]/10 transition-colors text-lg"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Book a Listing Consultation with Dr. Jan Duffy
+              </a>
+            </div>
             <p className="text-sm text-slate-300 mt-3">Call (702) 222-1964</p>
           </div>
         </div>
