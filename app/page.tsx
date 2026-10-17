@@ -13,6 +13,9 @@ import { WhyChooseReasons } from '@/components/WhyChooseReasons';
 import { MarketStat } from '@/components/MarketStat';
 import type { Metadata } from 'next';
 import { HomePageFaq } from '@/components/HomePageFaq';
+import { HomeLeadAnswers } from '@/components/HomeLeadAnswers';
+import { homeWebPageSchema } from '@/lib/schema';
+import { jsonLdStringify } from '@/lib/json-ld';
 
 const homeDescription =
   'Green Valley Ranch Henderson homes: Mystic Bay, The Cottages & GVR. Dr. Jan Duffy helps buyers and sellers with search, valuations, and local insight.';
@@ -55,6 +58,10 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLdStringify(homeWebPageSchema()) }}
+      />
       {/* Hero Section */}
       <section className="relative bg-[#0F172A] text-white py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -110,6 +117,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <HomeLeadAnswers />
 
       {/* Office Listings Section - Moved to top position */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50">

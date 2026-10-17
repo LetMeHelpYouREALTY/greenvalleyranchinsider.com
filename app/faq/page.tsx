@@ -4,6 +4,7 @@ import { Breadcrumbs } from '@/components/Breadcrumbs';
 import Link from 'next/link';
 import { RealScoutOfficeListings } from '@/components/RealScoutOfficeListings';
 import { WhyChooseReasons } from '@/components/WhyChooseReasons';
+import { jsonLdStringify } from '@/lib/json-ld';
 import { generateFAQSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
@@ -71,7 +72,7 @@ export default function FAQPage() {
     <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: jsonLdStringify(faqSchema) }}
       />
       {/* Hero Section */}
       <section className="relative bg-[#0F172A] text-white py-16 px-4 sm:px-6 lg:px-8">

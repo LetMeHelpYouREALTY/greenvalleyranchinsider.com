@@ -27,10 +27,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.greenvalleyranchinsider.com'),
   title: {
-    default: 'Green Valley Ranch Insider | Henderson NV Real Estate Authority',
+    default: 'Green Valley Ranch Henderson Home Sales | Dr. Jan Duffy',
     template: '%s | Green Valley Ranch Insider',
   },
-  description: 'Expert insights and premium listing services for Mystic Bay, The Cottages, and the Green Valley Ranch community. Get your custom insider valuation today. 30+ years experience, $127M+ in sales.',
+  description:
+    'Green Valley Ranch Henderson homes: Mystic Bay, The Cottages & GVR. Dr. Jan Duffy helps buyers and sellers with search, valuations, and local insight.',
   keywords: [
     'Green Valley Ranch',
     'Henderson NV real estate',
@@ -78,8 +79,9 @@ export const metadata: Metadata = {
     canonical: 'https://www.greenvalleyranchinsider.com',
   },
   openGraph: {
-    title: 'Green Valley Ranch Insider | Henderson NV Real Estate Authority',
-    description: 'Expert insights and premium listing services for Mystic Bay, The Cottages, and the Green Valley Ranch community. 30+ years experience, $127M+ in sales.',
+    title: 'Green Valley Ranch Henderson Home Sales | Dr. Jan Duffy',
+    description:
+      'Green Valley Ranch Henderson homes: Mystic Bay, The Cottages & GVR. Dr. Jan Duffy helps buyers and sellers with search, valuations, and local insight.',
     type: 'website',
     locale: 'en_US',
     siteName: 'Green Valley Ranch Insider',
@@ -96,8 +98,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Green Valley Ranch Insider | Henderson NV Real Estate Authority',
-    description: 'Expert insights and premium listing services for Mystic Bay, The Cottages, and the Green Valley Ranch community.',
+    title: 'Green Valley Ranch Henderson Home Sales | Dr. Jan Duffy',
+    description:
+      'Green Valley Ranch Henderson homes: Mystic Bay, The Cottages & GVR. Dr. Jan Duffy helps buyers and sellers with search, valuations, and local insight.',
     images: ['https://www.greenvalleyranchinsider.com/og-image.jpg'],
     creator: '@drjanduffy',
     site: '@greenvalleyranchinsider',

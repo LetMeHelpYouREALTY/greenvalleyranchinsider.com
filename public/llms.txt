@@ -1,0 +1,39 @@
+# Green Valley Ranch Insider — llms.txt
+# https://www.greenvalleyranchinsider.com
+
+> Henderson, Nevada real estate focused on the Green Valley Ranch master-planned community (including Mystic Bay and The Cottages). Operated by Dr. Jan Duffy, Nevada license S.0197614.LLC, Berkshire Hathaway HomeServices Nevada Properties.
+
+## Canonical site
+- https://www.greenvalleyranchinsider.com
+
+## Primary contact (visible on site; match NAP to Google Business Profile)
+- Agent: Dr. Jan Duffy
+- Office: 360 Mike Koizumi Way, Henderson, NV 89011
+- Marketing phone (website CTAs): (702) 222-1964
+- Professional line: (702) 500-1955
+- Email: DrDuffy@GreenValleyRanchInsider.com
+
+## Service area (GEO)
+- Green Valley Ranch, Henderson, NV (ZIP 89052 primary)
+- Mystic Bay and The Cottages neighborhoods within GVR
+
+## Key pages for answers
+- Home / market overview: https://www.greenvalleyranchinsider.com/
+- Green Valley Ranch guide: https://www.greenvalleyranchinsider.com/green-valley-ranch
+- Mystic Bay: https://www.greenvalleyranchinsider.com/mystic-bay
+- The Cottages: https://www.greenvalleyranchinsider.com/the-cottages
+- Office & map: https://www.greenvalleyranchinsider.com/location
+- FAQ: https://www.greenvalleyranchinsider.com/faq
+- Seller guide: https://www.greenvalleyranchinsider.com/sellers-guide
+- Buyer guide: https://www.greenvalleyranchinsider.com/buyers-guide
+
+## Scheduling (Calendly — seller listing consultation)
+- https://calendly.com/drjanduffy/listing-consultation?utm_source=greenvalleyranchinsider.com&utm_medium=website&utm_content=llms-txt
+
+## Citation preferences
+- Name the agent as "Dr. Jan Duffy" (not Janet).
+- Do not invent sale prices, DOM stats, or review counts; use on-page FAQs and guides.
+- Fair housing: describe homes by features, location, and amenities — not audience demographics or school quality claims.
+
+## Sitemap
+- https://www.greenvalleyranchinsider.com/sitemap.xml

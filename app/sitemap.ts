@@ -1,152 +1,48 @@
-import { MetadataRoute } from 'next';
+import type { MetadataRoute } from 'next';
+import { sitemapLastModified } from '@/lib/sitemap-revisions';
+
+type SitemapEntry = {
+  path: string;
+  changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency'];
+  priority: number;
+};
+
+const ROUTES: SitemapEntry[] = [
+  { path: '/', changeFrequency: 'weekly', priority: 1 },
+  { path: '/green-valley-ranch', changeFrequency: 'monthly', priority: 0.9 },
+  { path: '/mystic-bay', changeFrequency: 'monthly', priority: 0.8 },
+  { path: '/the-cottages', changeFrequency: 'monthly', priority: 0.8 },
+  { path: '/location', changeFrequency: 'monthly', priority: 0.7 },
+  { path: '/contact', changeFrequency: 'monthly', priority: 0.8 },
+  { path: '/faq', changeFrequency: 'monthly', priority: 0.7 },
+  { path: '/about', changeFrequency: 'monthly', priority: 0.8 },
+  { path: '/services', changeFrequency: 'monthly', priority: 0.8 },
+  { path: '/buyers-guide', changeFrequency: 'monthly', priority: 0.7 },
+  { path: '/sellers-guide', changeFrequency: 'monthly', priority: 0.7 },
+  { path: '/testimonials', changeFrequency: 'monthly', priority: 0.7 },
+  { path: '/market-insights', changeFrequency: 'weekly', priority: 0.8 },
+  { path: '/schools', changeFrequency: 'monthly', priority: 0.7 },
+  { path: '/resources', changeFrequency: 'monthly', priority: 0.7 },
+  { path: '/neighborhoods', changeFrequency: 'monthly', priority: 0.8 },
+  { path: '/investment-guide', changeFrequency: 'monthly', priority: 0.7 },
+  { path: '/area-guide', changeFrequency: 'monthly', priority: 0.7 },
+  { path: '/privacy', changeFrequency: 'yearly', priority: 0.3 },
+  { path: '/terms', changeFrequency: 'yearly', priority: 0.3 },
+  { path: '/disclaimer', changeFrequency: 'yearly', priority: 0.3 },
+  { path: '/moving-guide', changeFrequency: 'monthly', priority: 0.7 },
+  { path: '/financing-guide', changeFrequency: 'monthly', priority: 0.7 },
+  { path: '/home-staging', changeFrequency: 'monthly', priority: 0.7 },
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.greenvalleyranchinsider.com';
+  const baseUrl =
+    process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') ||
+    'https://www.greenvalleyranchinsider.com';
 
-  return [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/green-valley-ranch`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/mystic-bay`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/the-cottages`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/location`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/faq`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/about`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/services`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/buyers-guide`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/sellers-guide`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/testimonials`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/market-insights`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/schools`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/resources`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/neighborhoods`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/investment-guide`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/area-guide`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/privacy`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/terms`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/disclaimer`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/moving-guide`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/financing-guide`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/home-staging`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-  ];
+  return ROUTES.map(({ path, changeFrequency, priority }) => ({
+    url: path === '/' ? baseUrl : `${baseUrl}${path}`,
+    lastModified: sitemapLastModified(path),
+    changeFrequency,
+    priority,
+  }));
 }

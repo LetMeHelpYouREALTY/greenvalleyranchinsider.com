@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { homePageFaqs } from '@/lib/faq-content';
+import { jsonLdStringify } from '@/lib/json-ld';
 import { generateFAQSchema } from '@/lib/seo';
 
 export function HomePageFaq() {
@@ -9,7 +10,7 @@ export function HomePageFaq() {
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white" aria-labelledby="home-faq-heading">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: jsonLdStringify(faqSchema) }}
       />
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-10">
