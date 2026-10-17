@@ -288,3 +288,45 @@ export function buildNeighborhoodPageJsonLd({
 
   return [place, webpage];
 }
+
+type GuidePath = '/services' | '/sellers-guide' | '/buyers-guide' | '/schools';
+
+export function buildGuidePageJsonLd({
+  path,
+  pageTitle,
+  pageDescription,
+}: {
+  path: GuidePath;
+  pageTitle: string;
+  pageDescription: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${SITE_URL}${path}#webpage`,
+    url: `${SITE_URL}${path}`,
+    name: pageTitle,
+    description: pageDescription,
+    isPartOf: { '@id': WEBSITE_ID },
+    about: { '@id': GVR_PLACE_ID },
+    author: { '@id': PERSON_ID },
+    provider: { '@id': AGENT_ID },
+  };
+}
+
+export function schoolsItemListSchema(
+  schools: Array<{ name: string; level: string; description: string }>,
+) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    '@id': `${SITE_URL}/schools#school-list`,
+    name: 'Public schools near Green Valley Ranch, Henderson NV',
+    itemListElement: schools.map((school, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: `${school.name} (${school.level})`,
+      description: school.description,
+    })),
+  };
+}

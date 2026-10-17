@@ -4,17 +4,25 @@ import { Breadcrumbs } from '@/components/Breadcrumbs';
 import Link from 'next/link';
 import { RealScoutOfficeListings } from '@/components/RealScoutOfficeListings';
 import { WhyChooseReasons } from '@/components/WhyChooseReasons';
+import { GuidePageJsonLd } from '@/components/GuidePageJsonLd';
+import { NeighborhoodAtAGlance } from '@/components/NeighborhoodAtAGlance';
+import { sellersGuideLeadAnswers } from '@/lib/guide-aeo';
+
+const PAGE_PATH = '/sellers-guide';
+const PAGE_TITLE = 'Seller\'s Guide | Green Valley Ranch | Dr. Jan Duffy';
+const PAGE_DESCRIPTION =
+  'Step-by-step guide to selling in Green Valley Ranch, Mystic Bay, and The Cottages with Dr. Jan Duffy — pricing, marketing, and closing in Henderson, NV.';
 
 export const metadata: Metadata = {
-  title: 'Seller\'s Guide | Green Valley Ranch Insider | Henderson NV Home Selling',
-  description: 'Complete guide to selling your home in Green Valley Ranch, Mystic Bay, and The Cottages. Expert tips, pricing strategy, and step-by-step selling process.',
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   keywords: ['selling home Henderson', 'Green Valley Ranch seller guide', 'home selling process', 'how to sell home', 'selling in Mystic Bay', 'Henderson real estate selling'],
   alternates: {
     canonical: 'https://www.greenvalleyranchinsider.com/sellers-guide',
   },
   openGraph: {
     title: 'Seller\'s Guide | Green Valley Ranch Insider',
-    description: 'Complete guide to selling your home in Green Valley Ranch, Mystic Bay, and The Cottages.',
+    description: PAGE_DESCRIPTION,
     type: 'website',
     url: 'https://www.greenvalleyranchinsider.com/sellers-guide',
   },
@@ -73,7 +81,8 @@ export default function SellersGuidePage() {
     {
       icon: Home,
       title: 'Highlight Neighborhood Features',
-      description: 'Emphasize proximity to The District, top-rated schools, gated security (for Mystic Bay/Cottages), and community amenities.',
+      description:
+        'Emphasize proximity to The District, nearby CCSD schools (name specific schools), gated access where applicable, and community amenities.',
     },
     {
       icon: BarChart,
@@ -89,6 +98,7 @@ export default function SellersGuidePage() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      <GuidePageJsonLd path={PAGE_PATH} pageTitle={PAGE_TITLE} pageDescription={PAGE_DESCRIPTION} />
       {/* Hero Section */}
       <section className="relative bg-[#0F172A] text-white py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
@@ -108,11 +118,13 @@ export default function SellersGuidePage() {
         </div>
       </section>
 
+      <NeighborhoodAtAGlance heading="Selling in GVR at a glance" items={sellersGuideLeadAnswers} />
+
       {/* Introduction */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg max-w-none">
-            <h2 className="text-3xl font-bold text-[#0F172A] mb-6">Sell Your Green Valley Ranch Home for Top Dollar</h2>
+            <h2 className="text-3xl font-bold text-[#0F172A] mb-6">Sell Your Green Valley Ranch Home with a Clear Plan</h2>
             <p className="text-lg text-slate-700 leading-relaxed mb-4">
               Selling a home in Green Valley Ranch, especially in premium communities like Mystic Bay or The Cottages, requires a strategic approach. With my insider knowledge of these neighborhoods and the Henderson market, I'll help you maximize your sale price and minimize time on market.
             </p>

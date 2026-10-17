@@ -5,17 +5,25 @@ import Link from 'next/link';
 import { RealScoutOfficeListings } from '@/components/RealScoutOfficeListings';
 import { HowIHelp } from '@/components/HowIHelp';
 import { WhyChooseReasons } from '@/components/WhyChooseReasons';
+import { GuidePageJsonLd } from '@/components/GuidePageJsonLd';
+import { NeighborhoodAtAGlance } from '@/components/NeighborhoodAtAGlance';
+import { servicesLeadAnswers } from '@/lib/guide-aeo';
+
+const PAGE_PATH = '/services';
+const PAGE_TITLE = 'Real Estate Services | Green Valley Ranch | Dr. Jan Duffy';
+const PAGE_DESCRIPTION =
+  'Buyer and seller services in Green Valley Ranch, Mystic Bay, and The Cottages: search, valuations, marketing, and closings with Dr. Jan Duffy in Henderson, NV.';
 
 export const metadata: Metadata = {
-  title: 'Real Estate Services | Green Valley Ranch Insider | Henderson NV',
-  description: 'Comprehensive real estate services for sellers and buyers in Green Valley Ranch, Mystic Bay, and The Cottages. Home valuations, marketing, and expert guidance.',
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   keywords: ['real estate services Henderson', 'home selling services', 'home buying services', 'property marketing', 'home valuation services', 'Green Valley Ranch real estate'],
   alternates: {
     canonical: 'https://www.greenvalleyranchinsider.com/services',
   },
   openGraph: {
     title: 'Real Estate Services | Green Valley Ranch Insider',
-    description: 'Comprehensive real estate services for sellers and buyers in Green Valley Ranch, Mystic Bay, and The Cottages.',
+    description: PAGE_DESCRIPTION,
     type: 'website',
     url: 'https://www.greenvalleyranchinsider.com/services',
   },
@@ -24,6 +32,7 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      <GuidePageJsonLd path={PAGE_PATH} pageTitle={PAGE_TITLE} pageDescription={PAGE_DESCRIPTION} />
       {/* Breadcrumbs */}
       <div className="bg-white border-b border-slate-200 py-4">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -49,6 +58,8 @@ export default function ServicesPage() {
           </p>
         </div>
       </section>
+
+      <NeighborhoodAtAGlance heading="Services at a glance" items={servicesLeadAnswers} />
 
       {/* How I Help Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50">

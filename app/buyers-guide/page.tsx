@@ -4,17 +4,25 @@ import { Breadcrumbs } from '@/components/Breadcrumbs';
 import Link from 'next/link';
 import { RealScoutOfficeListings } from '@/components/RealScoutOfficeListings';
 import { WhyChooseReasons } from '@/components/WhyChooseReasons';
+import { GuidePageJsonLd } from '@/components/GuidePageJsonLd';
+import { NeighborhoodAtAGlance } from '@/components/NeighborhoodAtAGlance';
+import { buyersGuideLeadAnswers } from '@/lib/guide-aeo';
+
+const PAGE_PATH = '/buyers-guide';
+const PAGE_TITLE = 'Buyer\'s Guide | Green Valley Ranch | Dr. Jan Duffy';
+const PAGE_DESCRIPTION =
+  'How to buy in Green Valley Ranch, Mystic Bay, and The Cottages: pre-approval, search, offers, and closing with Dr. Jan Duffy in Henderson, NV.';
 
 export const metadata: Metadata = {
-  title: 'Buyer\'s Guide | Green Valley Ranch Insider | Henderson NV Home Buying',
-  description: 'Complete guide to buying a home in Green Valley Ranch, Mystic Bay, and The Cottages. Expert tips, neighborhood insights, and step-by-step buying process.',
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   keywords: ['buying home Henderson', 'Green Valley Ranch buyer guide', 'home buying process', 'first time home buyer Henderson', 'buying in Mystic Bay', 'Henderson real estate buying'],
   alternates: {
     canonical: 'https://www.greenvalleyranchinsider.com/buyers-guide',
   },
   openGraph: {
     title: 'Buyer\'s Guide | Green Valley Ranch Insider',
-    description: 'Complete guide to buying a home in Green Valley Ranch, Mystic Bay, and The Cottages.',
+    description: PAGE_DESCRIPTION,
     type: 'website',
     url: 'https://www.greenvalleyranchinsider.com/buyers-guide',
   },
@@ -84,6 +92,7 @@ export default function BuyersGuidePage() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      <GuidePageJsonLd path={PAGE_PATH} pageTitle={PAGE_TITLE} pageDescription={PAGE_DESCRIPTION} />
       {/* Hero Section */}
       <section className="relative bg-[#0F172A] text-white py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
@@ -103,16 +112,18 @@ export default function BuyersGuidePage() {
         </div>
       </section>
 
+      <NeighborhoodAtAGlance heading="Buying in GVR at a glance" items={buyersGuideLeadAnswers} />
+
       {/* Introduction */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg max-w-none">
             <h2 className="text-3xl font-bold text-[#0F172A] mb-6">Welcome to Green Valley Ranch</h2>
             <p className="text-lg text-slate-700 leading-relaxed mb-4">
-              Buying a home in Green Valley Ranch means joining a well-established master-planned community with top-rated schools, excellent amenities, and a variety of neighborhoods to choose from. Whether you're a first-time buyer or looking to upgrade, this guide will help you navigate the process.
+              Buying a home in Green Valley Ranch means choosing among master-planned neighborhoods such as Mystic Bay and The Cottages, with shopping at The District, parks, and CCSD schools to verify for your address. This guide walks through each step of the Henderson purchase process.
             </p>
             <p className="text-lg text-slate-700 leading-relaxed">
-              As your Green Valley Ranch Insider, I'll provide expert guidance every step of the way, from initial search to closing day.
+              Dr. Jan Duffy provides guidance from search through closing for Green Valley Ranch buyers.
             </p>
           </div>
         </div>
@@ -206,7 +217,10 @@ export default function BuyersGuidePage() {
                 <FileText className="w-6 h-6 text-[#C5A059] flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-bold text-[#0F172A] mb-2">Research Schools</h3>
-                  <p className="text-slate-600">Even if you don't have children, school ratings impact property values. Green Valley Ranch has access to highly-rated schools.</p>
+                  <p className="text-slate-600">
+                    Even if you do not have school-age children, buyers often review CCSD attendance zones and
+                    commute. Verify assignments on ccsd.net for each address you consider.
+                  </p>
                 </div>
               </div>
             </div>
