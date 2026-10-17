@@ -88,10 +88,21 @@ export function generateBreadcrumbSchema(items: Array<{ name: string; url: strin
 /**
  * Generate FAQ schema
  */
-export function generateFAQSchema(faqs: Array<{ question: string; answer: string }>) {
+export function generateFAQSchema(
+  faqs: Array<{ question: string; answer: string }>,
+  options?: { pageUrl?: string },
+) {
+  const pageUrl = options?.pageUrl;
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
+    ...(pageUrl
+      ? {
+          '@id': `${pageUrl}#faq`,
+          url: pageUrl,
+          mainEntityOfPage: { '@id': `${pageUrl}#webpage` },
+        }
+      : {}),
     mainEntity: faqs.map((faq) => ({
       '@type': 'Question',
       name: faq.question,

@@ -4,7 +4,9 @@ import { jsonLdStringify } from '@/lib/json-ld';
 import { generateFAQSchema } from '@/lib/seo';
 
 export function HomePageFaq() {
-  const faqSchema = generateFAQSchema(homePageFaqs);
+  const faqSchema = generateFAQSchema(homePageFaqs, {
+    pageUrl: 'https://www.greenvalleyranchinsider.com/',
+  });
 
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white" aria-labelledby="home-faq-heading">

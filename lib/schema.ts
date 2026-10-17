@@ -190,6 +190,32 @@ export const localBusinessRefSchema = {
   },
 };
 
+export function locationWebPageSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${SITE_URL}/location#webpage`,
+    url: `${SITE_URL}/location`,
+    name: 'Office Location | Dr. Jan Duffy | Green Valley Ranch Insider',
+    description:
+      'Visit Dr. Jan Duffy at 360 Mike Koizumi Way, Henderson, NV 89011. Directions, hours, and contact for Green Valley Ranch real estate.',
+    isPartOf: { '@id': WEBSITE_ID },
+    mainEntity: { '@id': AGENT_ID },
+  };
+}
+
+export function faqWebPageSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${SITE_URL}/faq#webpage`,
+    url: `${SITE_URL}/faq`,
+    name: 'Frequently Asked Questions | Green Valley Ranch Insider',
+    isPartOf: { '@id': WEBSITE_ID },
+    about: { '@id': GVR_PLACE_ID },
+  };
+}
+
 export function homeWebPageSchema() {
   return {
     '@context': 'https://schema.org',

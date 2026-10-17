@@ -3,6 +3,9 @@ import { MapPin, Phone, Mail, Clock, Building, Navigation, Award } from 'lucide-
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { RealScoutOfficeListings } from '@/components/RealScoutOfficeListings';
 import { WhyChooseReasons } from '@/components/WhyChooseReasons';
+import { OFFICE_HOURS } from '@/lib/constants';
+import { jsonLdStringify } from '@/lib/json-ld';
+import { locationWebPageSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Office Location | 360 Mike Koizumi Way, Henderson NV | Green Valley Ranch Insider',
@@ -66,6 +69,10 @@ export default async function LocationPage() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLdStringify(locationWebPageSchema()) }}
+      />
       {/* Hero Section */}
       <section className="relative bg-[#0F172A] text-white py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
@@ -281,19 +288,19 @@ export default async function LocationPage() {
               </h2>
               <div className="space-y-3 text-slate-700">
                 <div className="flex justify-between">
-                  <span className="font-semibold">Monday - Friday</span>
-                  <span>9:00 AM - 6:00 PM</span>
+                  <span className="font-semibold">{OFFICE_HOURS.weekdays.label}</span>
+                  <span>{OFFICE_HOURS.weekdays.hours}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="font-semibold">Saturday</span>
-                  <span>10:00 AM - 4:00 PM</span>
+                  <span className="font-semibold">{OFFICE_HOURS.saturday.label}</span>
+                  <span>{OFFICE_HOURS.saturday.hours}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="font-semibold">Sunday</span>
-                  <span>By Appointment</span>
+                  <span className="font-semibold">{OFFICE_HOURS.sunday.label}</span>
+                  <span>{OFFICE_HOURS.sunday.hours}</span>
                 </div>
                 <div className="pt-4 border-t border-slate-200 text-sm text-slate-600">
-                  <p>* Hours may vary. Please call ahead to confirm availability.</p>
+                  <p>* {OFFICE_HOURS.note}</p>
                 </div>
               </div>
             </div>

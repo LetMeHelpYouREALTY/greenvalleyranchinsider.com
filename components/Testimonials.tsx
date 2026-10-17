@@ -1,7 +1,6 @@
 'use client';
 
 import { Star } from 'lucide-react';
-import { AGENT_ID } from '@/lib/schema';
 
 interface Testimonial {
   id: string;
@@ -54,35 +53,9 @@ const testimonials: Testimonial[] = [
   },
 ];
 
-// Generate Review schema for each testimonial
-const reviewSchema = testimonials.map(t => ({
-  "@context": "https://schema.org",
-  "@type": "Review",
-  "itemReviewed": {
-    "@id": AGENT_ID
-  },
-  "reviewRating": {
-    "@type": "Rating",
-    "ratingValue": t.rating,
-    "bestRating": "5"
-  },
-  "author": {
-    "@type": "Person",
-    "name": t.name
-  },
-  "reviewBody": t.quote,
-  "datePublished": `${t.year}-01-01`
-}));
-
 export function Testimonials() {
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50">
-      {/* Review Schema Markup */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
-      />
-      
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A] mb-4">

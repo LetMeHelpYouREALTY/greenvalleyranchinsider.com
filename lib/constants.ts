@@ -9,6 +9,14 @@ export const SITE_CONFIG = {
   description: 'Expert insights and premium listing services for Mystic Bay, The Cottages, and the Green Valley Ranch community.',
 } as const;
 
+/** Visible office hours — keep in sync with openingHoursSpecification in lib/schema.ts */
+export const OFFICE_HOURS = {
+  weekdays: { label: 'Monday - Friday', hours: '8:00 AM - 6:00 PM' },
+  saturday: { label: 'Saturday', hours: '9:00 AM - 5:00 PM' },
+  sunday: { label: 'Sunday', hours: '9:00 AM - 5:00 PM' },
+  note: 'Hours may vary. Call ahead to confirm availability.',
+} as const;
+
 export const CONTACT_INFO = {
   name: 'Dr. Jan Duffy',
   primaryPhone: '(702) 500-1955',
