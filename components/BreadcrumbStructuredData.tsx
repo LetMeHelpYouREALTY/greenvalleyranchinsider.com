@@ -1,3 +1,5 @@
+import { jsonLdStringify } from '@/lib/json-ld';
+
 type BreadcrumbItem = {
   label: string;
   href?: string;
@@ -25,7 +27,7 @@ export function BreadcrumbStructuredData({ items }: BreadcrumbStructuredDataProp
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{
-        __html: JSON.stringify(breadcrumbList),
+        __html: jsonLdStringify(breadcrumbList),
       }}
     />
   );

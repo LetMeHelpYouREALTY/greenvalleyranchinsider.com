@@ -237,3 +237,54 @@ export function homeWebPageSchema() {
     },
   };
 }
+
+type NeighborhoodPath = '/green-valley-ranch' | '/mystic-bay' | '/the-cottages';
+
+export function buildNeighborhoodPageJsonLd({
+  path,
+  placeName,
+  placeDescription,
+  pageTitle,
+  pageDescription,
+}: {
+  path: NeighborhoodPath;
+  placeName: string;
+  placeDescription: string;
+  pageTitle: string;
+  pageDescription: string;
+}) {
+  const placeId = `${SITE_URL}${path}#place`;
+  const containedInPlace =
+    path === '/green-valley-ranch'
+      ? hendersonCity
+      : {
+          '@type': 'Place',
+          '@id': GVR_PLACE_ID,
+          name: 'Green Valley Ranch',
+          containedInPlace: hendersonCity,
+        };
+
+  const place = {
+    '@context': 'https://schema.org',
+    '@type': 'Place',
+    '@id': placeId,
+    name: placeName,
+    description: placeDescription,
+    containedInPlace,
+  };
+
+  const webpage = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${SITE_URL}${path}#webpage`,
+    url: `${SITE_URL}${path}`,
+    name: pageTitle,
+    description: pageDescription,
+    isPartOf: { '@id': WEBSITE_ID },
+    about: { '@id': placeId },
+    mainEntity: { '@id': placeId },
+    author: { '@id': PERSON_ID },
+  };
+
+  return [place, webpage];
+}

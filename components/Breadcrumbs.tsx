@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { ChevronRight, Home } from 'lucide-react';
 import { SITE_CONFIG } from '@/lib/constants';
+import { jsonLdStringify } from '@/lib/json-ld';
 import { generateBreadcrumbSchema } from '@/lib/seo';
 
 interface BreadcrumbItem {
@@ -32,7 +33,7 @@ export function Breadcrumbs({ items, className = '' }: BreadcrumbsProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
+          __html: jsonLdStringify(breadcrumbSchema),
         }}
       />
 

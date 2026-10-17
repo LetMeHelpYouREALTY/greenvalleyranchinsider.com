@@ -4,9 +4,9 @@
  */
 const REVISIONS: Record<string, string> = {
   '/': '2026-10-17',
-  '/green-valley-ranch': '2026-08-15',
-  '/mystic-bay': '2026-08-15',
-  '/the-cottages': '2026-08-15',
+  '/green-valley-ranch': '2026-10-17',
+  '/mystic-bay': '2026-10-17',
+  '/the-cottages': '2026-10-17',
   '/location': '2026-10-17',
   '/contact': '2026-09-01',
   '/faq': '2026-10-17',

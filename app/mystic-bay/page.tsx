@@ -1,20 +1,34 @@
 import type { Metadata } from 'next';
-import { Home, Users, DollarSign, Calendar, Heart, MapPin, TrendingUp, Shield } from 'lucide-react';
+import { Home, Users, Heart, MapPin, TrendingUp, Shield } from 'lucide-react';
 import Link from 'next/link';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { RealScoutOfficeListings } from '@/components/RealScoutOfficeListings';
 import { WhyChooseReasons } from '@/components/WhyChooseReasons';
+import { NeighborhoodAtAGlance } from '@/components/NeighborhoodAtAGlance';
+import { NeighborhoodPageJsonLd } from '@/components/NeighborhoodPageJsonLd';
+import { mysticBayLeadAnswers } from '@/lib/neighborhood-aeo';
+
+const PAGE_PATH = '/mystic-bay';
+const PAGE_TITLE = 'Mystic Bay Henderson NV | Green Valley Ranch | Dr. Jan Duffy';
+const PAGE_DESCRIPTION =
+  'Mystic Bay is a gated Green Valley Ranch subdivision in Henderson, NV with Mediterranean-style homes. Neighborhood guide and real estate from Dr. Jan Duffy.';
 
 export const metadata: Metadata = {
-  title: 'Mystic Bay Henderson NV | Green Valley Ranch Insider | Neighborhood Spotlight',
-  description: 'Mystic Bay is a peaceful neighborhood in Henderson, NV with 212 residents, $94K average income, and 68% homeowners. Known for well-maintained homes, friendly community, and perfect for families and retirees.',
-  keywords: ['Mystic Bay Henderson NV', 'Mystic Bay neighborhood', 'Henderson Nevada neighborhoods', 'Green Valley Ranch', 'family friendly Henderson', 'retiree community Henderson'],
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+  keywords: [
+    'Mystic Bay Henderson NV',
+    'Mystic Bay neighborhood',
+    'Henderson Nevada neighborhoods',
+    'Green Valley Ranch',
+    'Mystic Bay homes for sale',
+  ],
   alternates: {
     canonical: 'https://www.greenvalleyranchinsider.com/mystic-bay',
   },
   openGraph: {
     title: 'Mystic Bay Henderson NV | Neighborhood Spotlight',
-    description: 'A peaceful neighborhood known for well-maintained homes and friendly community. Perfect for families and retirees.',
+    description: PAGE_DESCRIPTION,
     type: 'website',
     url: 'https://www.greenvalleyranchinsider.com/mystic-bay',
   },
@@ -26,11 +40,14 @@ export default function MysticBayPage() {
     name: 'Mystic Bay',
     city: 'Henderson',
     state: 'NV',
-    residents: 212,
-    averageIncome: '$94K',
-    averageAge: 52,
-    homeowners: '68%',
-    description: 'Mystic Bay is a peaceful, gated subdivision within the Green Valley Ranch master-planned community in Henderson, NV. Developed by American Nevada Corporation with high-end regional builders, Mystic Bay features larger, custom Mediterranean-style homes typically over 2,500 sq. ft. Known for well-maintained homes and a friendly community, it\'s a quiet area with easy access to local amenities, making it a great place for families and retirees alike.',
+    description:
+      'Mystic Bay is a gated subdivision within the Green Valley Ranch master-planned community in Henderson, NV. Developed with American Nevada Corporation and regional builders, Mystic Bay features larger Mediterranean-style homes, often above 2,500 sq. ft., with access to Green Valley Ranch amenities and The District.',
+    highlights: [
+      { label: 'Setting', value: 'Gated subdivision' },
+      { label: 'Home style', value: 'Mediterranean-style, larger floor plans' },
+      { label: 'Location', value: 'Green Valley Ranch, Henderson, NV' },
+      { label: 'ZIP code', value: '89052 (typical for GVR)' },
+    ],
     topInterests: [
       'Dogs',
       'Hiking & Trails',
@@ -48,11 +65,9 @@ export default function MysticBayPage() {
       'Clean',
       'Community',
       'Dog Friendly',
-      'Family Friendly',
       'Peaceful',
       'Proximity',
       'Quiet',
-      'Safe',
       'Walking',
     ],
     location: 'North-east of Silverado Ranch and south-west of Green Valley South',
@@ -67,6 +82,13 @@ export default function MysticBayPage() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      <NeighborhoodPageJsonLd
+        path={PAGE_PATH}
+        placeName="Mystic Bay"
+        placeDescription={PAGE_DESCRIPTION}
+        pageTitle={PAGE_TITLE}
+        pageDescription={PAGE_DESCRIPTION}
+      />
       {/* Breadcrumbs */}
       <div className="bg-white border-b border-slate-200 py-4">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -106,54 +128,22 @@ export default function MysticBayPage() {
         </div>
       </section>
 
-      {/* Neighborhood Stats */}
+      <NeighborhoodAtAGlance heading="Mystic Bay at a glance" items={mysticBayLeadAnswers} />
+
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-[#0F172A] mb-10 text-center">
-            Neighborhood Statistics
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {/* Residents */}
-            <div className="bg-gradient-to-br from-[#0F172A] to-slate-900 rounded-xl p-6 text-white border border-slate-700">
-              <div className="flex items-center justify-center w-12 h-12 bg-[#C5A059] rounded-lg mb-4">
-                <Users className="w-6 h-6 text-[#0F172A]" />
+          <h2 className="text-3xl font-bold text-[#0F172A] mb-10 text-center">Neighborhood highlights</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {neighborhoodData.highlights.map((item) => (
+              <div
+                key={item.label}
+                className="bg-gradient-to-br from-[#0F172A] to-slate-900 rounded-xl p-6 text-white border border-slate-700"
+              >
+                <p className="text-[#C5A059] text-sm font-semibold mb-2">{item.label}</p>
+                <p className="text-lg font-bold leading-snug">{item.value}</p>
               </div>
-              <p className="text-3xl font-bold mb-2">{neighborhoodData.residents}</p>
-              <p className="text-slate-300 text-sm">Residents</p>
-            </div>
-
-            {/* Average Income */}
-            <div className="bg-gradient-to-br from-[#0F172A] to-slate-900 rounded-xl p-6 text-white border border-slate-700">
-              <div className="flex items-center justify-center w-12 h-12 bg-[#C5A059] rounded-lg mb-4">
-                <DollarSign className="w-6 h-6 text-[#0F172A]" />
-              </div>
-              <p className="text-3xl font-bold mb-2">{neighborhoodData.averageIncome}</p>
-              <p className="text-slate-300 text-sm">Average Income</p>
-            </div>
-
-            {/* Average Age */}
-            <div className="bg-gradient-to-br from-[#0F172A] to-slate-900 rounded-xl p-6 text-white border border-slate-700">
-              <div className="flex items-center justify-center w-12 h-12 bg-[#C5A059] rounded-lg mb-4">
-                <Calendar className="w-6 h-6 text-[#0F172A]" />
-              </div>
-              <p className="text-3xl font-bold mb-2">{neighborhoodData.averageAge}</p>
-              <p className="text-slate-300 text-sm">Average Age</p>
-            </div>
-
-            {/* Homeowners */}
-            <div className="bg-gradient-to-br from-[#0F172A] to-slate-900 rounded-xl p-6 text-white border border-slate-700">
-              <div className="flex items-center justify-center w-12 h-12 bg-[#C5A059] rounded-lg mb-4">
-                <Home className="w-6 h-6 text-[#0F172A]" />
-              </div>
-              <p className="text-3xl font-bold mb-2">{neighborhoodData.homeowners}</p>
-              <p className="text-slate-300 text-sm">Homeowners</p>
-            </div>
+            ))}
           </div>
-
-          <p className="text-center text-slate-500 text-sm mt-6">
-            Data from <a href="https://nextdoor.com/neighborhood/mysticbaynv--henderson--nv/" target="_blank" rel="noopener noreferrer" className="text-[#C5A059] hover:underline">Nextdoor.com</a> and US Census Data
-          </p>
         </div>
       </section>
 

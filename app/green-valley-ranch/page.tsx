@@ -4,17 +4,26 @@ import Link from 'next/link';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { RealScoutOfficeListings } from '@/components/RealScoutOfficeListings';
 import { WhyChooseReasons } from '@/components/WhyChooseReasons';
+import { NeighborhoodAtAGlance } from '@/components/NeighborhoodAtAGlance';
+import { NeighborhoodPageJsonLd } from '@/components/NeighborhoodPageJsonLd';
+import { greenValleyRanchLeadAnswers } from '@/lib/neighborhood-aeo';
+
+const PAGE_PATH = '/green-valley-ranch';
+const PAGE_URL = `https://www.greenvalleyranchinsider.com${PAGE_PATH}`;
+const PAGE_TITLE = 'Green Valley Ranch Henderson NV | Community Guide | Dr. Jan Duffy';
+const PAGE_DESCRIPTION =
+  'Green Valley Ranch Henderson NV guide: master-planned communities, The District, Mystic Bay, The Cottages, and real estate with Dr. Jan Duffy.';
 
 export const metadata: Metadata = {
-  title: 'Green Valley Ranch Henderson NV | Master-Planned Community Guide | Green Valley Ranch Insider',
-  description: 'Green Valley Ranch is a well-established master-planned community in Henderson, NV with over a dozen gated and public communities. Features The District shopping center, top-rated schools, and luxury amenities.',
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   keywords: ['Green Valley Ranch Henderson', 'Green Valley Ranch neighborhood', 'Henderson master-planned community', 'The District Green Valley Ranch', 'Green Valley Ranch Resort', 'Henderson Nevada neighborhoods'],
   alternates: {
     canonical: 'https://www.greenvalleyranchinsider.com/green-valley-ranch',
   },
   openGraph: {
     title: 'Green Valley Ranch Henderson NV | Master-Planned Community Guide',
-    description: 'A well-established master-planned community offering suburban tranquility and urban amenities.',
+    description: PAGE_DESCRIPTION,
     type: 'website',
     url: 'https://www.greenvalleyranchinsider.com/green-valley-ranch',
   },
@@ -26,7 +35,8 @@ export default function GreenValleyRanchPage() {
     name: 'Green Valley Ranch',
     city: 'Henderson',
     state: 'Nevada',
-    description: 'Green Valley Ranch in Henderson, Nevada, is a well-established, master-planned community offering a blend of suburban tranquility and urban amenities. The neighborhood comprises over a dozen gated and public communities, managed by the Green Valley Ranch master association.',
+    description:
+      'Green Valley Ranch in Henderson, Nevada, is a master-planned community with multiple gated and public neighborhoods managed by the Green Valley Ranch master association, including Mystic Bay and The Cottages.',
     housingOptions: {
       singleFamily: {
         description: 'Single-family homes with stucco facades and tile roofing',
@@ -71,7 +81,6 @@ export default function GreenValleyRanchPage() {
       elementary: 'Neil C. Twitchell Elementary',
       middle: 'Bob Miller Middle',
       high: 'Coronado High School',
-      rating: 'Highly rated',
     },
     transportation: {
       public: 'Some public bus stops available',
@@ -86,6 +95,13 @@ export default function GreenValleyRanchPage() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      <NeighborhoodPageJsonLd
+        path={PAGE_PATH}
+        placeName="Green Valley Ranch"
+        placeDescription={PAGE_DESCRIPTION}
+        pageTitle={PAGE_TITLE}
+        pageDescription={PAGE_DESCRIPTION}
+      />
       {/* Hero Section */}
       <section className="relative bg-[#0F172A] text-white py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
@@ -119,6 +135,8 @@ export default function GreenValleyRanchPage() {
           </div>
         </div>
       </section>
+
+      <NeighborhoodAtAGlance heading="Green Valley Ranch at a glance" items={greenValleyRanchLeadAnswers} />
 
       {/* Overview */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
@@ -336,7 +354,7 @@ export default function GreenValleyRanchPage() {
               <h3 className="text-2xl font-bold">{communityData.schools.district}</h3>
             </div>
             <p className="text-slate-300 mb-6">
-              Green Valley Ranch is served by highly rated schools in the Clark County School District.
+              Green Valley Ranch is served by Clark County School District schools, including:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">

@@ -4,17 +4,25 @@ import Link from 'next/link';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { RealScoutOfficeListings } from '@/components/RealScoutOfficeListings';
 import { WhyChooseReasons } from '@/components/WhyChooseReasons';
+import { NeighborhoodAtAGlance } from '@/components/NeighborhoodAtAGlance';
+import { NeighborhoodPageJsonLd } from '@/components/NeighborhoodPageJsonLd';
+import { theCottagesLeadAnswers } from '@/lib/neighborhood-aeo';
+
+const PAGE_PATH = '/the-cottages';
+const PAGE_TITLE = 'The Cottages Green Valley Ranch | Henderson NV | Dr. Jan Duffy';
+const PAGE_DESCRIPTION =
+  'The Cottages is a gated Green Valley Ranch subdivision in Henderson, NV by Pacific Homes with efficient 1,500–1,900 sq. ft. floor plans. Guide by Dr. Jan Duffy.';
 
 export const metadata: Metadata = {
-  title: 'The Cottages at Green Valley Ranch | Henderson NV | Green Valley Ranch Insider',
-  description: 'The Cottages at Green Valley Ranch is a gated subdivision in Henderson, NV built by Pacific Homes. Featuring compact, efficient floor plans from 1,500 to 1,900 sq. ft. within the Green Valley Ranch master-planned community.',
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   keywords: ['The Cottages Green Valley Ranch', 'The Cottages Henderson NV', 'Pacific Homes Henderson', 'Green Valley Ranch gated community', 'Henderson Nevada neighborhoods', 'compact homes Henderson'],
   alternates: {
     canonical: 'https://www.greenvalleyranchinsider.com/the-cottages',
   },
   openGraph: {
     title: 'The Cottages at Green Valley Ranch | Henderson NV',
-    description: 'A gated subdivision built by Pacific Homes with compact, efficient homes ranging from 1,500 to 1,900 sq. ft.',
+    description: PAGE_DESCRIPTION,
     type: 'website',
     url: 'https://www.greenvalleyranchinsider.com/the-cottages',
   },
@@ -46,7 +54,7 @@ export default function TheCottagesPage() {
       'Access to Green Valley Ranch amenities',
       'Close to The District shopping center',
       'Easy access to I-215',
-      'Top-rated schools nearby',
+      'Clark County School District schools nearby',
     ],
     advantages: [
       'Affordable entry point into Green Valley Ranch',
@@ -60,6 +68,13 @@ export default function TheCottagesPage() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      <NeighborhoodPageJsonLd
+        path={PAGE_PATH}
+        placeName="The Cottages at Green Valley Ranch"
+        placeDescription={PAGE_DESCRIPTION}
+        pageTitle={PAGE_TITLE}
+        pageDescription={PAGE_DESCRIPTION}
+      />
       {/* Hero Section */}
       <section className="relative bg-[#0F172A] text-white py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
@@ -94,6 +109,8 @@ export default function TheCottagesPage() {
           </div>
         </div>
       </section>
+
+      <NeighborhoodAtAGlance heading="The Cottages at a glance" items={theCottagesLeadAnswers} />
 
       {/* Key Statistics */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
@@ -280,7 +297,7 @@ export default function TheCottagesPage() {
             <p className="text-slate-700 leading-relaxed mb-6">
               The Cottages is located within the Green Valley Ranch master-planned community in Henderson, Nevada. 
               It shares the same premium location benefits as neighboring Mystic Bay, with easy access to The District 
-              at Green Valley Ranch, top-rated schools, and major highways.
+              at Green Valley Ranch, nearby Clark County schools, and major highways.
             </p>
             <div>
               <h3 className="font-semibold text-[#0F172A] mb-3">Nearby Neighborhoods:</h3>
