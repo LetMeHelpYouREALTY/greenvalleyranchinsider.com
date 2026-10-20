@@ -67,7 +67,7 @@ describe('sendFollowUpBossEvent', () => {
 
     const mockFetch = mock.fn(async () => ({
       status: 201,
-    })) as typeof fetch;
+    }));
 
     const result = await sendFollowUpBossEvent(
       {
@@ -81,12 +81,12 @@ describe('sendFollowUpBossEvent', () => {
         email: 'jan@example.com',
         tags: ['Contact Form'],
       },
-      mockFetch
+      mockFetch as unknown as typeof fetch
     );
 
     assert.equal(result.ok, true);
     assert.equal(mockFetch.mock.calls.length, 1);
-    const [, init] = mockFetch.mock.calls[0].arguments as [string, RequestInit];
+    const [, init] = mockFetch.mock.calls[0].arguments as unknown as [string, RequestInit];
     assert.match(String(init?.headers && (init.headers as Record<string, string>).Authorization), /^Basic /);
     assert.equal(init?.method, 'POST');
 
