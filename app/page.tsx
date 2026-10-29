@@ -95,16 +95,16 @@ export default function Home() {
           
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="sms:+17022221964?body=GVR"
+              href="sms:+17025001955?body=GVR"
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold bg-[#C5A059] text-[#0F172A] rounded-lg hover:bg-[#B8914F] transition-colors shadow-lg hover:shadow-xl"
             >
-              Text &apos;GVR&apos; to 702-222-1964
+              Text &apos;GVR&apos; to 702-500-1955
             </a>
             <a
-              href="tel:+17022221964"
+              href="tel:+17025001955"
               className="inline-flex items-center justify-center px-6 py-4 text-lg font-semibold bg-transparent border-2 border-[#C5A059] text-[#C5A059] rounded-lg hover:bg-[#C5A059]/10 transition-colors"
             >
-              Call (702) 222-1964
+              Call (702) 500-1955
             </a>
             <a
               href="https://calendly.com/drjanduffy/listing-consultation?utm_source=greenvalleyranchinsider.com&utm_medium=website&utm_content=home-hero-seller"

@@ -87,7 +87,7 @@ export default function MarketInsightsPage() {
     },
     {
       title: 'Premium Pricing for Location',
-      description: 'Proximity to The District shopping center, top-rated schools, and I-215 access commands premium pricing. Homes near these amenities sell 5-8% above average.',
+      description: 'Proximity to The District shopping center, nearby public schools, and I-215 access commands premium pricing. Homes near these amenities sell 5-8% above average.',
       icon: MapPin,
     },
     {

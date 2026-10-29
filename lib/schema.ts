@@ -46,7 +46,7 @@ export const realEstateAgentSchema = {
   url: SITE_URL,
   logo: `${SITE_URL}/logo.png`,
   image: `${SITE_URL}/dr-jan-duffy.jpg`,
-  telephone: ['+1-702-500-1955', '+1-702-222-1964'],
+  telephone: ['+1-702-500-1955', '+1-702-500-1955'],
   email: CONTACT_INFO.email,
   address: {
     '@type': 'PostalAddress',
@@ -172,7 +172,7 @@ export const localBusinessRefSchema = {
   '@id': BUSINESS_ID,
   name: 'Green Valley Ranch Insider — Dr. Jan Duffy',
   url: SITE_URL,
-  telephone: '+1-702-222-1964',
+  telephone: '+1-702-500-1955',
   address: {
     '@type': 'PostalAddress',
     streetAddress: CONTACT_INFO.address.street,

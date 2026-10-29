@@ -181,14 +181,14 @@ export function RealScoutSoldListings({
             © {new Date().getFullYear()} Greater Las Vegas Association of Realtors (GLVAR). Information Deemed Reliable But Not Guaranteed.
           </p>
           <a 
-            href="tel:+17022221964"
+            href="tel:+17025001955"
             onClick={() => trackPhoneClick('What\'s YOUR Home Worth? - Sold Listings CTA')}
             className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#C5A059] text-[#0F172A] rounded-lg font-semibold hover:bg-[#B8914F] transition-colors shadow-lg"
           >
             <Phone className="w-5 h-5" />
             What&apos;s YOUR Home Worth?
           </a>
-          <p className="text-slate-600 text-sm mt-3">Call/text (702) 222-1964</p>
+          <p className="text-slate-600 text-sm mt-3">Call/text (702) 500-1955</p>
         </div>
       </div>
     </section>
