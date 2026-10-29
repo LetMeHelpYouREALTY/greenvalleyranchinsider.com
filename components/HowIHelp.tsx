@@ -113,8 +113,8 @@ export function HowIHelp() {
             <p className="text-xl font-semibold mb-4">Ready to sell your Green Valley Ranch home?</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="tel:+17022221964"
-                onClick={() => trackPhoneClick('7022221964')}
+                href="tel:+17025001955"
+                onClick={() => trackPhoneClick('7025001955')}
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#C5A059] text-[#0F172A] rounded-lg font-semibold hover:bg-[#B8914F] transition-colors shadow-lg text-lg"
               >
                 <Phone className="w-5 h-5" />
@@ -129,7 +129,7 @@ export function HowIHelp() {
                 Book a Listing Consultation with Dr. Jan Duffy
               </a>
             </div>
-            <p className="text-sm text-slate-300 mt-3">Call (702) 222-1964</p>
+            <p className="text-sm text-slate-300 mt-3">Call (702) 500-1955</p>
           </div>
         </div>
 
@@ -165,14 +165,14 @@ export function HowIHelp() {
           <div className="bg-gradient-to-br from-[#0F172A] to-slate-900 rounded-xl p-8 text-white text-center">
             <p className="text-xl font-semibold mb-4">Ready to find your perfect Green Valley Ranch home?</p>
             <a
-              href="tel:+17022221964"
-              onClick={() => trackPhoneClick('7022221964')}
+              href="tel:+17025001955"
+              onClick={() => trackPhoneClick('7025001955')}
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#C5A059] text-[#0F172A] rounded-lg font-semibold hover:bg-[#B8914F] transition-colors shadow-lg text-lg"
             >
               <Phone className="w-5 h-5" />
               See GVR Homes First
             </a>
-            <p className="text-sm text-slate-300 mt-3">Call (702) 222-1964</p>
+            <p className="text-sm text-slate-300 mt-3">Call (702) 500-1955</p>
           </div>
         </div>
       </div>

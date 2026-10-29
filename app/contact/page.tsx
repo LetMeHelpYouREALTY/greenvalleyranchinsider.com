@@ -57,10 +57,10 @@ export default function ContactPage() {
                 (702) 500-1955
               </a>
               <a
-                href="tel:+17022221964"
+                href="tel:+17025001955"
                 className="text-slate-300 hover:text-[#C5A059] transition-colors text-sm"
               >
-                (702) 222-1964
+                (702) 500-1955
               </a>
             </div>
 

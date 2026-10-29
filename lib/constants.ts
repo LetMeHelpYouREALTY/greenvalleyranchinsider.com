@@ -21,8 +21,8 @@ export const CONTACT_INFO = {
   name: 'Dr. Jan Duffy',
   primaryPhone: '(702) 500-1955',
   primaryPhoneLink: 'tel:+17025001955',
-  marketingPhone: '(702) 222-1964',
-  marketingPhoneLink: 'tel:+17022221964',
+  marketingPhone: '(702) 500-1955',
+  marketingPhoneLink: 'tel:+17025001955',
   email: 'DrDuffy@GreenValleyRanchInsider.com',
   emailLink: 'mailto:DrDuffy@GreenValleyRanchInsider.com',
   address: {

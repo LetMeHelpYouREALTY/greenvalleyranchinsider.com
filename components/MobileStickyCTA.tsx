@@ -22,7 +22,7 @@ export function MobileStickyCTA() {
       <div className="flex gap-3 p-3 max-w-lg mx-auto">
         {/* Call Button */}
         <a
-          href="tel:+17022221964"
+          href="tel:+17025001955"
           onClick={handleCallClick}
           className="flex-1 bg-[#C5A059] hover:bg-[#B8914F] text-[#0F172A] font-semibold py-3 px-4 rounded-lg flex items-center justify-center gap-2 transition-colors"
         >
@@ -32,7 +32,7 @@ export function MobileStickyCTA() {
         
         {/* Text Button */}
         <a
-          href="sms:+17022221964?body=Hi%20Dr.%20Duffy%2C%20I'm%20interested%20in%20Green%20Valley%20Ranch%20real%20estate."
+          href="sms:+17025001955?body=Hi%20Dr.%20Duffy%2C%20I'm%20interested%20in%20Green%20Valley%20Ranch%20real%20estate."
           onClick={handleTextClick}
           className="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center gap-2 transition-colors"
         >

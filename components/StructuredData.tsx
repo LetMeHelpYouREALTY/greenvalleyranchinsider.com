@@ -15,7 +15,7 @@ export function StructuredData({ type, data }: StructuredDataProps) {
     name: 'Dr. Jan Duffy',
     jobTitle: 'Real Estate Agent',
     email: 'DrDuffy@GreenValleyRanchInsider.com',
-    telephone: ['+17025001955', '+17022221964'],
+    telephone: ['+17025001955', '+17025001955'],
     url: 'https://www.greenvalleyranchinsider.com',
     address: {
       '@type': 'PostalAddress',

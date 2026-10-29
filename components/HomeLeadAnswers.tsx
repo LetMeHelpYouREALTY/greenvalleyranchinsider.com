@@ -59,8 +59,8 @@ export function HomeLeadAnswers() {
             <p className="text-slate-700 leading-relaxed">
               Use the property search and home value tools on this site, or contact Dr. Jan Duffy
               at{' '}
-              <a href="tel:+17022221964" className="text-[#C5A059] font-semibold hover:underline">
-                (702) 222-1964
+              <a href="tel:+17025001955" className="text-[#C5A059] font-semibold hover:underline">
+                (702) 500-1955
               </a>{' '}
               (text &quot;GVR&quot; for updates). Sellers can{' '}
               <a

@@ -21,7 +21,7 @@ export const greenValleyRanchLeadAnswers: LeadAnswerItem[] = [
   {
     question: 'How do I see homes for sale in Green Valley Ranch?',
     answer:
-      'Use the property search on this site or contact Dr. Jan Duffy at (702) 222-1964 for active listings and off-market opportunities in your target neighborhood.',
+      'Use the property search on this site or contact Dr. Jan Duffy at (702) 500-1955 for active listings and off-market opportunities in your target neighborhood.',
   },
 ];
 
@@ -39,7 +39,7 @@ export const mysticBayLeadAnswers: LeadAnswerItem[] = [
   {
     question: 'How do I buy or sell in Mystic Bay?',
     answer:
-      'Dr. Jan Duffy lists and represents buyers in Mystic Bay. Start with the home search on this site or call (702) 222-1964 for a neighborhood-specific market review.',
+      'Dr. Jan Duffy lists and represents buyers in Mystic Bay. Start with the home search on this site or call (702) 500-1955 for a neighborhood-specific market review.',
   },
 ];
 
@@ -57,6 +57,6 @@ export const theCottagesLeadAnswers: LeadAnswerItem[] = [
   {
     question: 'Who lists homes in The Cottages?',
     answer:
-      'Dr. Jan Duffy helps buyers and sellers in The Cottages with pricing, HOA disclosures, and marketing. Request a valuation on the homepage or call (702) 222-1964.',
+      'Dr. Jan Duffy helps buyers and sellers in The Cottages with pricing, HOA disclosures, and marketing. Request a valuation on the homepage or call (702) 500-1955.',
   },
 ];

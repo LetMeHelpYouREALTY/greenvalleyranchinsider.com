@@ -20,11 +20,11 @@ export function Footer() {
                 <span>(702) 500-1955</span>
               </a>
               <a
-                href="tel:+17022221964"
+                href="tel:+17025001955"
                 className="flex items-center gap-3 hover:text-[#C5A059] transition-colors"
               >
                 <Phone className="w-5 h-5" />
-                <span>(702) 222-1964</span>
+                <span>(702) 500-1955</span>
               </a>
               <a
                 href="mailto:DrDuffy@GreenValleyRanchInsider.com"

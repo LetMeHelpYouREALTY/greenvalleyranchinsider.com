@@ -91,7 +91,7 @@ export function StatsSection() {
           </div>
           <div className="text-center">
             <a
-              href="tel:+17022221964"
+              href="tel:+17025001955"
               onClick={() => trackPhoneClick('Get Your Home\'s Current Value - Stats Section Seller CTA')}
               className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#C5A059] text-[#0F172A] rounded-lg font-semibold hover:bg-[#B8914F] transition-colors shadow-lg"
             >
@@ -127,7 +127,7 @@ export function StatsSection() {
           </div>
           <div className="text-center">
             <a
-              href="tel:+17022221964"
+              href="tel:+17025001955"
               onClick={() => trackPhoneClick('See GVR Homes First - Stats Section Buyer CTA')}
               className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#C5A059] text-[#0F172A] rounded-lg font-semibold hover:bg-[#B8914F] transition-colors shadow-lg"
             >
