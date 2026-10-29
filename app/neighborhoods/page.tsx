@@ -31,7 +31,7 @@ export default function NeighborhoodsPage() {
       style: 'Mediterranean',
       priceRange: '$650,000 - $1,200,000+',
       features: ['Gated security', 'Larger homes', 'Custom finishes', 'Luxury appeal'],
-      description: 'Premium gated community with larger, custom Mediterranean-style homes. Perfect for families seeking luxury living.',
+      description: 'Premium gated community with larger, custom Mediterranean-style homes. Perfect for buyers seeking luxury living.',
       icon: Shield,
       color: 'from-blue-500 to-blue-600',
     },
@@ -56,7 +56,7 @@ export default function NeighborhoodsPage() {
       homeSize: '1,800 - 4,000+ sq. ft.',
       style: 'Various',
       priceRange: '$450,000 - $1,500,000+',
-      features: ['Diverse options', 'Multiple builders', 'Established community', 'Strong amenities'],
+      features: ['Diverse options', 'Multiple builders', 'Older community', 'Strong amenities'],
       description: 'The larger master-planned community with diverse housing options and excellent amenities.',
       icon: Building,
       color: 'from-purple-500 to-purple-600',
@@ -102,7 +102,7 @@ export default function NeighborhoodsPage() {
               Green Valley Ranch is a master-planned community with over a dozen distinct neighborhoods, each offering unique characteristics, home styles, and lifestyles. Whether you're seeking a luxury gated community like Mystic Bay, an efficient first-time buyer option like The Cottages, or the diverse options throughout GVR Estates, there's a perfect fit for every buyer.
             </p>
             <p className="text-lg text-slate-700 leading-relaxed">
-              All neighborhoods share access to Green Valley Ranch's excellent amenities, top-rated schools, and prime Henderson location near The District shopping center.
+              All neighborhoods share access to Green Valley Ranch's excellent amenities, nearby public schools, and prime Henderson location near The District shopping center.
             </p>
           </div>
         </div>

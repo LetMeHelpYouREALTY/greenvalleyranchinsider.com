@@ -31,7 +31,7 @@ export default function AreaGuidePage() {
     {
       icon: TreePine,
       title: 'Parks & Recreation',
-      description: 'Multiple parks, walking trails, and recreational facilities throughout Green Valley Ranch. Perfect for families and outdoor enthusiasts.',
+      description: 'Multiple parks, walking trails, and recreational facilities throughout Green Valley Ranch. Perfect for buyers and outdoor enthusiasts.',
       distance: 'Throughout community',
     },
     {
@@ -54,8 +54,8 @@ export default function AreaGuidePage() {
     },
     {
       icon: GraduationCap,
-      title: 'Top-Rated Schools',
-      description: 'Access to highly-rated schools including Vanderburg Elementary, Coronado High School, and more.',
+      title: 'Nearby Public Schools',
+      description: 'Access to public schools including Vanderburg Elementary, Coronado High School, and more.',
       distance: 'Serving area',
     },
   ];
@@ -86,8 +86,8 @@ export default function AreaGuidePage() {
   const lifestyle = [
     {
       icon: Heart,
-      title: 'Family-Friendly',
-      description: 'Safe neighborhoods, excellent schools, and community events make Green Valley Ranch ideal for families.',
+      title: 'Parks & Recreation',
+      description: 'Nearby schools and community events make Green Valley Ranch ideal for buyers.',
     },
     {
       icon: Building,
@@ -128,10 +128,10 @@ export default function AreaGuidePage() {
           <div className="prose prose-lg max-w-none">
             <h2 className="text-3xl font-bold text-[#0F172A] mb-6">Welcome to Henderson, Nevada</h2>
             <p className="text-lg text-slate-700 leading-relaxed mb-4">
-              Henderson is Nevada's second-largest city and consistently ranked among the safest cities in America. Green Valley Ranch, located in the heart of Henderson, offers the perfect blend of suburban tranquility and urban convenience.
+              Henderson is Nevada's second-largest city. Green Valley Ranch, located in the heart of Henderson, offers the perfect blend of suburban tranquility and urban convenience.
             </p>
             <p className="text-lg text-slate-700 leading-relaxed">
-              With easy access to Las Vegas amenities, top-rated schools, excellent shopping and dining, and a strong sense of community, Green Valley Ranch provides an exceptional quality of life for residents.
+              With easy access to Las Vegas amenities, nearby public schools, excellent shopping and dining, and a strong sense of community, Green Valley Ranch provides an exceptional quality of life for residents.
             </p>
           </div>
         </div>

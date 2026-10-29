@@ -62,7 +62,7 @@ export default function InvestmentGuidePage() {
     {
       factor: 'School Quality',
       impact: 'High',
-      description: 'Top-rated schools maintain property values and attract families',
+      description: 'Nearby public schools maintain property values and attract families',
     },
     {
       factor: 'Amenities',
@@ -94,7 +94,7 @@ export default function InvestmentGuidePage() {
     },
     {
       title: 'Market Stability',
-      description: 'Green Valley Ranch\'s established community and amenities provide stability compared to newer developments.',
+      description: 'Green Valley Ranch\'s community and amenities provide stability compared to newer developments.',
       icon: Shield,
     },
   ];
@@ -126,7 +126,7 @@ export default function InvestmentGuidePage() {
           <div className="prose prose-lg max-w-none">
             <h2 className="text-3xl font-bold text-[#0F172A] mb-6">Why Invest in Green Valley Ranch?</h2>
             <p className="text-lg text-slate-700 leading-relaxed mb-4">
-              Green Valley Ranch offers attractive investment opportunities for real estate investors. The master-planned community's established reputation, strong schools, and prime Henderson location create a stable foundation for rental income and property appreciation.
+              Green Valley Ranch offers attractive investment opportunities for real estate investors. The master-planned community's established reputation, nearby public schools, and prime Henderson location create a stable foundation for rental income and property appreciation.
             </p>
             <p className="text-lg text-slate-700 leading-relaxed mb-4">
               Whether you're interested in long-term rental properties, fix-and-flip opportunities, or building a portfolio, Green Valley Ranch's diverse neighborhoods provide options for various investment strategies.
