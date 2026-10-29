@@ -11,7 +11,7 @@ export function NeighborhoodFocus() {
           <span className="text-[#C5A059]">Mystic Bay</span> Spotlight
         </h2>
         <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-4">
-          A peaceful neighborhood in Henderson, NV, known for well-maintained homes and friendly community. Perfect for families and retirees.
+          A peaceful neighborhood in Henderson, NV, known for well-maintained homes and friendly neighbors.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-slate-400 mt-6">
           <span><strong className="text-[#C5A059]">212</strong> Residents</span>
@@ -79,7 +79,7 @@ export function NeighborhoodFocus() {
               </li>
               <li className="flex items-start">
                 <span className="text-[#C5A059] mr-2">•</span>
-                <span>Minutes from top-rated schools (Vanderburg & Glen Taylor Elementary)</span>
+                <span>Minutes from nearby public schools (Vanderburg & Glen Taylor Elementary)</span>
               </li>
               <li className="flex items-start">
                 <span className="text-[#C5A059] mr-2">•</span>
