@@ -168,7 +168,7 @@ Ensure these are set in Vercel:
 ## Support Contacts
 
 - **Primary Phone**: (702) 500-1955
-- **Marketing Phone**: (702) 222-1964
+- **Marketing Phone**: (702) 500-1955
 - **Email**: DrDuffy@GreenValleyRanchInsider.com
 - **Office**: 360 Mike Koizumi Way, Henderson, NV 89011
 - **License**: S.0197614.LLC

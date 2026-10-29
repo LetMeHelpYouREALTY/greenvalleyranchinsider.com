@@ -9,6 +9,7 @@ import { EnhancedSchema } from '@/components/EnhancedSchema';
 import { ScrollToTop } from '@/components/ScrollToTop';
 import { SkipToContent } from '@/components/SkipToContent';
 import { ClientPerformance } from '@/components/ClientPerformance';
+import WidgetTracker from './widget-tracker'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -222,6 +223,7 @@ export default function RootLayout({
         <Footer />
         <ScrollToTop />
         <Toaster />
+        <WidgetTracker />
       </body>
     </html>
   );

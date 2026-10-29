@@ -9,7 +9,7 @@ export const servicesLeadAnswers: LeadAnswerItem[] = [
   {
     question: 'How do I request a home valuation in Henderson?',
     answer:
-      'Use the home value tool on the homepage or contact Dr. Jan Duffy at (702) 222-1964. Valuations reflect your property details and recent comparable activity in your neighborhood.',
+      'Use the home value tool on the homepage or contact Dr. Jan Duffy at (702) 500-1955. Valuations reflect your property details and recent comparable activity in your neighborhood.',
   },
   {
     question: 'Does Dr. Jan Duffy work with Berkshire Hathaway HomeServices?',
@@ -27,7 +27,7 @@ export const sellersGuideLeadAnswers: LeadAnswerItem[] = [
   {
     question: 'How do I book a seller consultation with Dr. Jan Duffy?',
     answer:
-      'Schedule a listing consultation online via Calendly or call (702) 222-1964. Dr. Jan Duffy will review timing, pricing, and marketing for your Henderson property.',
+      'Schedule a listing consultation online via Calendly or call (702) 500-1955. Dr. Jan Duffy will review timing, pricing, and marketing for your Henderson property.',
   },
   {
     question: 'What should I know about selling in a gated GVR community?',
@@ -50,7 +50,7 @@ export const buyersGuideLeadAnswers: LeadAnswerItem[] = [
   {
     question: 'Who is the agent for Green Valley Ranch buyers?',
     answer:
-      'Dr. Jan Duffy (702-222-1964) represents buyers in Henderson and Green Valley Ranch with local market insight, offer strategy, and contract-to-close coordination.',
+      'Dr. Jan Duffy (702-500-1955) represents buyers in Henderson and Green Valley Ranch with local market insight, offer strategy, and contract-to-close coordination.',
   },
 ];
 
