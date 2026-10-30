@@ -55,27 +55,6 @@ export function Footer() {
             </div>
           </div>
 
-          {/* License & Brokerage */}
-          <div>
-            <h3 className="text-xl font-bold mb-4 text-[#C5A059]">License & Brokerage</h3>
-            <div className="space-y-3">
-              <div className="flex items-start gap-3">
-                <Award className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                <div>
-                  <p className="font-semibold">Dr. Jan Duffy</p>
-                  <p className="text-slate-300 text-sm">License #S.0197614.LLC</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                <div>
-                  <p className="font-semibold">Berkshire Hathaway</p>
-                  <p className="text-slate-300 text-sm">HomeServices Nevada Properties</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
           {/* Quick Links - Organized by Category */}
           <div>
             <h3 className="text-xl font-bold mb-4 text-[#C5A059]">Quick Links</h3>
@@ -234,7 +213,7 @@ export function Footer() {
             © {new Date().getFullYear()} Green Valley Ranch Insider. All rights reserved.
           </p>
           <p className="mt-2">
-            Licensed Real Estate Professional | Nevada License #S.0197614.LLC
+            Berkshire Hathaway HomeServices Nevada Properties since September 2008 · License S.0197614.LLC
           </p>
           <p className="mt-2">
             360 Mike Koizumi Way, Henderson, NV 89011
@@ -255,15 +234,6 @@ export function Footer() {
             <Link href="/disclaimer" className="text-slate-400 hover:text-[#C5A059] transition-colors">
               Disclaimer
             </Link>
-            <span className="text-slate-600">|</span>
-            <a
-              href="https://www.berkshirehathawayhs.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-slate-400 hover:text-[#C5A059] transition-colors"
-            >
-              Berkshire Hathaway HomeServices
-            </a>
           </div>
         </div>
       </div>

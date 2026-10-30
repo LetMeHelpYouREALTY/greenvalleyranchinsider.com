@@ -16,7 +16,7 @@ export const greenValleyRanchLeadAnswers: LeadAnswerItem[] = [
   {
     question: 'Who helps with Green Valley Ranch real estate?',
     answer:
-      'Dr. Jan Duffy (Nevada license S.0197614.LLC, Berkshire Hathaway HomeServices Nevada Properties) assists buyers and sellers across Green Valley Ranch and Henderson.',
+      'Dr. Jan Duffy assists buyers and sellers across Green Valley Ranch and Henderson.',
   },
   {
     question: 'How do I see homes for sale in Green Valley Ranch?',

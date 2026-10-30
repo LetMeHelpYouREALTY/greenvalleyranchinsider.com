@@ -6,14 +6,14 @@ import { RealScoutOfficeListings } from '@/components/RealScoutOfficeListings';
 
 export const metadata: Metadata = {
   title: 'About Dr. Jan Duffy | Green Valley Ranch Insider | Henderson NV Real Estate Expert',
-  description: 'Meet Dr. Jan Duffy, a top-performing real estate agent with 30+ years of experience in Las Vegas and Henderson. Expert in Green Valley Ranch, Mystic Bay, and The Cottages communities.',
+  description: 'Meet Dr. Jan Duffy, a top-performing real estate agent licensed since 2008 · 35 years in Las Vegas. Expert in Green Valley Ranch, Mystic Bay, and The Cottages communities.',
   keywords: ['Dr. Jan Duffy', 'Henderson real estate agent', 'Green Valley Ranch realtor', 'Berkshire Hathaway agent', 'Las Vegas real estate expert', 'top real estate agent Henderson'],
   alternates: {
     canonical: 'https://www.greenvalleyranchinsider.com/about',
   },
   openGraph: {
     title: 'About Dr. Jan Duffy | Green Valley Ranch Insider',
-    description: 'Meet Dr. Jan Duffy, a top-performing real estate agent with 30+ years of experience in Las Vegas and Henderson.',
+    description: 'Meet Dr. Jan Duffy, a top-performing real estate agent licensed since 2008 · 35 years in Las Vegas.',
     type: 'website',
     url: 'https://www.greenvalleyranchinsider.com/about',
   },
@@ -43,7 +43,7 @@ export default function AboutPage() {
           </h1>
           
           <p className="text-xl sm:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto">
-            30+ years of real estate expertise in Las Vegas and Henderson. 
+            Licensed since 2008 · 35 years in Las Vegas. 
             Your trusted guide to Green Valley Ranch, Mystic Bay, and The Cottages.
           </p>
         </div>
@@ -55,7 +55,7 @@ export default function AboutPage() {
           <div className="prose prose-lg max-w-none">
             <h2 className="text-3xl font-bold text-[#0F172A] mb-6">Your Green Valley Ranch Insider</h2>
             <p className="text-lg text-slate-700 leading-relaxed mb-4">
-              With over 30 years of experience in the Las Vegas and Henderson real estate markets, Dr. Jan Duffy brings unparalleled expertise to every transaction. As a top-performing agent with Berkshire Hathaway HomeServices Nevada Properties, she specializes in the prestigious Green Valley Ranch master-planned community and its exclusive subdivisions.
+              Licensed since 2008 · 35 years in Las Vegas, Dr. Jan Duffy brings unparalleled expertise to every transaction. As a top-performing agent, she specializes in the prestigious Green Valley Ranch master-planned community and its exclusive subdivisions.
             </p>
             <p className="text-lg text-slate-700 leading-relaxed mb-4">
               Dr. Duffy's deep knowledge of neighborhoods like Mystic Bay, The Cottages, and GVR Estates goes beyond what you'll find in a typical listing. She understands the unique characteristics, market trends, and insider details that make each community special—knowledge that comes from years of working directly with homeowners and buyers in these areas.
@@ -72,9 +72,9 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-5xl font-bold text-[#C5A059] mb-2">30+</div>
-              <div className="text-lg font-semibold text-[#0F172A] mb-1">Years Experience</div>
-              <div className="text-sm text-slate-600">Las Vegas real estate expertise</div>
+              <div className="text-5xl font-bold text-[#C5A059] mb-2">35</div>
+              <div className="text-lg font-semibold text-[#0F172A] mb-1">Years in Las Vegas</div>
+              <div className="text-sm text-slate-600">Licensed since 2008</div>
             </div>
             <div className="text-center">
               <div className="text-5xl font-bold text-[#C5A059] mb-2">135+</div>
@@ -84,7 +84,7 @@ export default function AboutPage() {
             <div className="text-center">
               <div className="text-5xl font-bold text-[#C5A059] mb-2">Top</div>
               <div className="text-lg font-semibold text-[#0F172A] mb-1">Agent Performance</div>
-              <div className="text-sm text-slate-600">Berkshire Hathaway HomeServices</div>
+              <div className="text-sm text-slate-600">5.0★ on Realtor.com (50 reviews)</div>
             </div>
             <div className="text-center">
               <div className="text-5xl font-bold text-[#C5A059] mb-2">Expert</div>
