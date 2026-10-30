@@ -305,22 +305,6 @@ export default async function LocationPage() {
               </div>
             </div>
 
-            <div className="bg-white rounded-xl p-8 border border-slate-200">
-              <h2 className="text-2xl font-bold text-[#0F172A] mb-6 flex items-center gap-3">
-                <Award className="w-6 h-6 text-[#C5A059]" />
-                License & Brokerage
-              </h2>
-              <div className="space-y-4">
-                <div>
-                  <p className="font-semibold text-lg text-[#0F172A]">Dr. Jan Duffy</p>
-                  <p className="text-slate-600">License #S.0197614.LLC</p>
-                </div>
-                <div className="pt-4 border-t border-slate-200">
-                  <p className="font-semibold text-lg text-[#0F172A]">Berkshire Hathaway</p>
-                  <p className="text-slate-600">HomeServices Nevada Properties</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>

@@ -11,11 +11,6 @@ export const servicesLeadAnswers: LeadAnswerItem[] = [
     answer:
       'Use the home value tool on the homepage or contact Dr. Jan Duffy at (702) 500-1955. Valuations reflect your property details and recent comparable activity in your neighborhood.',
   },
-  {
-    question: 'Does Dr. Jan Duffy work with Berkshire Hathaway HomeServices?',
-    answer:
-      'Yes. Dr. Jan Duffy (Nevada license S.0197614.LLC) is with Berkshire Hathaway HomeServices Nevada Properties, office at 360 Mike Koizumi Way, Henderson, NV 89011.',
-  },
 ];
 
 export const sellersGuideLeadAnswers: LeadAnswerItem[] = [

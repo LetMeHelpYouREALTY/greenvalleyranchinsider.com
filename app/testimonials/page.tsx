@@ -81,9 +81,9 @@ export default function TestimonialsPage() {
   ];
 
   const stats = [
-    { label: '5-Star Reviews', value: '100%', icon: Star },
+    { label: 'Realtor.com · 50 reviews', value: '5.0★', icon: Star },
     { label: 'Satisfied Clients', value: '500+', icon: Users },
-    { label: 'Years Experience', value: '30+', icon: Award },
+    { label: 'Years in Las Vegas', value: '35', icon: Award },
   ];
 
   return (

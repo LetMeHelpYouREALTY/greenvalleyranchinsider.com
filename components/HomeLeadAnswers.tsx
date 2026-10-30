@@ -42,8 +42,7 @@ export function HomeLeadAnswers() {
               Who helps with Green Valley Ranch home sales?
             </h3>
             <p className="text-slate-700 leading-relaxed">
-              <strong>Dr. Jan Duffy</strong> (Nevada license {`S.0197614.LLC`},{' '}
-              {`Berkshire Hathaway HomeServices Nevada Properties`}) assists buyers and sellers
+              <strong>Dr. Jan Duffy</strong> assists buyers and sellers
               in Green Valley Ranch with pricing, showings, offers, and closings. Office:{' '}
               <Link href="/location" className="text-[#C5A059] font-semibold hover:underline">
                 360 Mike Koizumi Way, Henderson, NV 89011
