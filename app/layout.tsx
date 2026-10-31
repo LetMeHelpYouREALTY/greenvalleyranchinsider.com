@@ -9,6 +9,8 @@ import { EnhancedSchema } from '@/components/EnhancedSchema';
 import { ScrollToTop } from '@/components/ScrollToTop';
 import { SkipToContent } from '@/components/SkipToContent';
 import { ClientPerformance } from '@/components/ClientPerformance';
+import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
+import { SpeedInsights as VercelSpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -222,6 +224,8 @@ export default function RootLayout({
         <Footer />
         <ScrollToTop />
         <Toaster />
+        <VercelAnalytics />
+        <VercelSpeedInsights />
       </body>
     </html>
   );
